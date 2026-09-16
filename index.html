@@ -42,6 +42,7 @@ body{
   margin:0; background:var(--cream-50); color:var(--ink-800);
   font-family:var(--font-body); font-size:17px; line-height:1.7;
   -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  overflow-x:hidden;
 }
 img{max-width:100%; display:block}
 h1,h2,h3,h4{margin:0}
@@ -70,14 +71,18 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* ---------- NAV ---------- */
 .nav{
   position:sticky; top:0; z-index:80;
-  background:rgba(253,251,246,.92); backdrop-filter:blur(12px);
+  background:rgba(253,251,246,.98);
   border-bottom:1px solid var(--sand-200);
+}
+@media(min-width:768px){
+  .nav{background:rgba(253,251,246,.92); backdrop-filter:blur(12px)}
 }
 .nav-inner{display:flex; align-items:center; gap:20px; height:72px}
 .nav-brand{
   font-family:var(--font-display); font-size:18px; font-weight:500;
   color:var(--rosewood-900); white-space:nowrap; letter-spacing:-.01em;
   text-decoration:none; flex:none;
+  overflow:hidden; text-overflow:ellipsis; max-width:100%;
 }
 .nav-links{
   display:flex; align-items:center; gap:26px; overflow-x:auto; scrollbar-width:none;
@@ -91,6 +96,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .nav-links a:hover{color:var(--rosewood-700); border-bottom-color:var(--rosewood-500)}
 .nav-cta{flex:none}
 .nav .btn-primary{height:44px; padding:0 22px; font-size:14.5px}
+
+@media(max-width:679px){
+  .nav-inner{gap:12px}
+  .nav-links{display:none}
+  .nav-brand{flex:1 1 auto; min-width:0; font-size:16px}
+  .nav .btn-primary{padding:0 16px; font-size:13px; gap:6px}
+  .nav .btn-primary .wa-icon{width:16px; height:16px}
+}
 
 /* ---------- EYEBROW ---------- */
 .eyebrow{
@@ -417,7 +430,7 @@ footer.site-footer{border-top:1px solid var(--sand-200); background:var(--sand-1
 
   <!-- ========== HERO / INÍCIO ========== -->
   <section class="hero" id="inicio" aria-labelledby="hero-title">
-    <video class="hero-bg-video" autoplay muted loop playsinline preload="auto" poster="assets/dra-cristiane-hero.png" aria-hidden="true">
+    <video class="hero-bg-video" muted loop playsinline preload="none" poster="assets/dra-cristiane-hero.webp" aria-hidden="true">
       <source src="assets/dra-cristiane-hero.mp4" type="video/mp4">
     </video>
     <div class="hero-bg-overlay" aria-hidden="true"></div>
@@ -439,7 +452,7 @@ footer.site-footer{border-top:1px solid var(--sand-200); background:var(--sand-1
 
         <div class="hero-photo reveal d3">
           <div class="frame">
-            <img src="assets/dra-cristiane-hero.png" alt="Dra. Cristiane Fardim Murad, cirurgiã-dentista, sorrindo em retrato profissional" width="840" height="1050" loading="eager" fetchpriority="high">
+            <img src="assets/dra-cristiane-hero.webp" alt="Dra. Cristiane Fardim Murad, cirurgiã-dentista, sorrindo em retrato profissional" width="840" height="1050" loading="eager" fetchpriority="high">
           </div>
           <div class="badge" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.86L12 17.77l-6.18 3.23L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
@@ -466,8 +479,8 @@ footer.site-footer{border-top:1px solid var(--sand-200); background:var(--sand-1
           <p class="body">A Dra. Cristiane Fardim Murad atua em Lavras-MG oferecendo uma odontologia próxima, cuidadosa e tecnicamente precisa. Cada atendimento é conduzido com atenção ao histórico, às necessidades e ao ritmo de cada paciente — porque tratar bem começa por ouvir bem.</p>
         </div>
         <div class="about-photos">
-          <div class="ph"><img src="assets/dra-cristiane-sobre-1.png" alt="Dra. Cristiane Fardim Murad, cirurgiã-dentista CRO-MG 27161, em retrato profissional" width="480" height="600" loading="lazy"></div>
-          <div class="ph"><img src="assets/dra-cristiane-sobre-2.png" alt="Dra. Cristiane Fardim Murad em retrato profissional, sorrindo" width="480" height="600" loading="lazy"></div>
+          <div class="ph"><img src="assets/dra-cristiane-sobre-1.webp" alt="Dra. Cristiane Fardim Murad, cirurgiã-dentista CRO-MG 27161, em retrato profissional" width="480" height="600" loading="lazy"></div>
+          <div class="ph"><img src="assets/dra-cristiane-sobre-2.webp" alt="Dra. Cristiane Fardim Murad em retrato profissional, sorrindo" width="480" height="600" loading="lazy"></div>
         </div>
       </div>
 
@@ -498,7 +511,7 @@ footer.site-footer{border-top:1px solid var(--sand-200); background:var(--sand-1
 
       <div class="specialist-grid">
         <div class="specialist-photo">
-          <img src="assets/dra-cristiane-especialista.png" alt="Retrato profissional da Dra. Cristiane Fardim Murad, cirurgiã-dentista responsável técnica, CRO-MG 27161" width="620" height="775" loading="lazy">
+          <img src="assets/dra-cristiane-especialista.webp" alt="Retrato profissional da Dra. Cristiane Fardim Murad, cirurgiã-dentista responsável técnica, CRO-MG 27161" width="620" height="775" loading="lazy">
         </div>
         <div>
           <p class="specialist-name">Dra. Cristiane Fardim Murad</p>
@@ -531,7 +544,7 @@ footer.site-footer{border-top:1px solid var(--sand-200); background:var(--sand-1
     <div class="wrap">
       <div class="harmon-grid">
         <div class="harmon-photo">
-          <img src="assets/dra-cristiane-sobre-2.png" alt="Dra. Cristiane Fardim Murad, cirurgiã-dentista, em retrato profissional" width="480" height="600" loading="lazy">
+          <img src="assets/dra-cristiane-sobre-2.webp" alt="Dra. Cristiane Fardim Murad, cirurgiã-dentista, em retrato profissional" width="480" height="600" loading="lazy">
         </div>
         <div class="harmon-copy">
           <span class="eyebrow">Especialidade em destaque</span>
@@ -820,10 +833,17 @@ footer.site-footer{border-top:1px solid var(--sand-200); background:var(--sand-1
   var video = document.querySelector('.hero-bg-video');
   if(!video) return;
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
-  if(reduce.matches){ video.removeAttribute('autoplay'); video.pause(); }
-  reduce.addEventListener('change', function(e){
-    if(e.matches){ video.pause(); } else { video.play().catch(function(){}); }
-  });
+  var desktop = window.matchMedia('(min-width: 768px)');
+  function sync(){
+    if(desktop.matches && !reduce.matches){
+      video.play().catch(function(){});
+    } else {
+      video.pause();
+    }
+  }
+  sync();
+  desktop.addEventListener('change', sync);
+  reduce.addEventListener('change', sync);
 })();
 </script>
 </body>
