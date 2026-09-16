@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dra. Cristiane Fardim Murad · Odontologia em Lavras/MG</title>
+<meta name="description" content="Odontologia de confiança em Lavras/MG. Atendimento próximo, técnica apurada e cuidado individual com a Dra. Cristiane Fardim Murad, CRO-MG 27161. Agende pelo WhatsApp.">
+<meta name="theme-color" content="#241D1B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctext y='19' font-size='20'%3E%F0%9F%A6%B7%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rosewood-900:#4E3036; --rosewood-700:#8B5C64; --rosewood-500:#A97A81;
+  --rosewood-300:#C9A3A7; --rosewood-200:#DCB9BB; --rosewood-100:#F0E1E2;
+  --cream-50:#FDFBF6; --sand-100:#F6EDE4; --sand-200:#E7DACD;
+  --ink-600:#6B5F5A; --ink-800:#3B322F; --espresso-900:#241D1B;
+  --whatsapp:#25D366; --whatsapp-dark:#128C7E; --gold-400:#B9955F;
+  --jade-700:#2E6B52; --alert-600:#A5463C;
+
+  --font-display:'Fraunces',Georgia,'Times New Roman',serif;
+  --font-body:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+
+  --radius-sm:8px; --radius-md:12px; --radius-lg:16px;
+  --radius-xl:20px; --radius-2xl:28px; --radius-full:999px;
+
+  --shadow-sm:0 1px 2px rgba(78,48,54,.06);
+  --shadow-md:0 4px 16px rgba(78,48,54,.08);
+  --shadow-lg:0 12px 34px rgba(78,48,54,.12);
+  --shadow-cta:0 6px 18px rgba(78,48,54,.18);
+  --shadow-float:0 8px 24px rgba(37,211,102,.35);
+
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px;
+  --space-6:32px; --space-7:48px; --space-8:64px; --space-9:96px; --space-10:128px;
+  --container:1200px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:78px}
+body{
+  margin:0; background:var(--cream-50); color:var(--ink-800);
+  font-family:var(--font-body); font-size:17px; line-height:1.7;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+img{max-width:100%; display:block}
+h1,h2,h3,h4{margin:0}
+p{margin:0}
+ul{margin:0; padding:0; list-style:none}
+a{color:inherit}
+button{font-family:inherit}
+
+.wrap{max-width:var(--container); margin:0 auto; padding:0 24px}
+@media(min-width:768px){ .wrap{padding:0 40px} }
+@media(min-width:1100px){ .wrap{padding:0 80px} }
+
+.skip-link{
+  position:absolute; left:16px; top:-60px; z-index:100;
+  background:var(--espresso-900); color:#fff; padding:12px 20px;
+  border-radius:var(--radius-md); text-decoration:none; font-weight:600;
+  transition:top .2s ease;
+}
+.skip-link:focus{top:16px}
+
+/* ---------- FOCUS ---------- */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+  outline:3px solid var(--rosewood-500); outline-offset:3px; border-radius:4px;
+}
+
+/* ---------- NAV ---------- */
+.nav{
+  position:sticky; top:0; z-index:80;
+  background:rgba(253,251,246,.92); backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--sand-200);
+}
+.nav-inner{display:flex; align-items:center; gap:20px; height:72px}
+.nav-brand{
+  font-family:var(--font-display); font-size:18px; font-weight:500;
+  color:var(--rosewood-900); white-space:nowrap; letter-spacing:-.01em;
+  text-decoration:none; flex:none;
+}
+.nav-links{
+  display:flex; align-items:center; gap:26px; overflow-x:auto; scrollbar-width:none;
+  flex:1; min-width:0;
+}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{
+  color:var(--ink-600); text-decoration:none; font-size:14.5px; font-weight:500;
+  white-space:nowrap; padding:8px 2px; border-bottom:2px solid transparent;
+}
+.nav-links a:hover{color:var(--rosewood-700); border-bottom-color:var(--rosewood-500)}
+.nav-cta{flex:none}
+.nav .btn-primary{height:44px; padding:0 22px; font-size:14.5px}
+
+/* ---------- EYEBROW ---------- */
+.eyebrow{
+  display:inline-block; border-left:2px solid var(--rosewood-500);
+  padding-left:10px; font-size:12px; font-weight:600; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--rosewood-500); line-height:1;
+  margin-bottom:22px;
+}
+.eyebrow.on-dark{color:var(--rosewood-300); border-left-color:var(--rosewood-300)}
+
+/* ---------- SEÇÕES ---------- */
+section.block{padding:clamp(64px,9vw,128px) 0}
+section.block.alt{background:var(--sand-100)}
+.sec-head{max-width:62ch; margin-bottom:var(--space-8)}
+.sec-head h2{
+  font-family:var(--font-display); font-weight:400;
+  font-size:clamp(1.875rem,1.4rem + 2vw,2.625rem);
+  line-height:1.15; letter-spacing:-.015em; color:var(--rosewood-900);
+}
+.sec-head h2 em{display:block; font-style:italic; color:var(--rosewood-500)}
+.sec-head p{margin-top:14px; color:var(--ink-600); font-size:17px; max-width:62ch}
+.sec-head.center{margin-left:auto; margin-right:auto; text-align:center}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:var(--espresso-900); color:#F3EBE4; overflow:hidden; position:relative;
+  padding:clamp(56px,8vw,88px) 0 clamp(40px,6vw,64px);
+}
+.hero-bg-video{
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit:cover; object-position:center; z-index:0;
+  opacity:.38;
+}
+.hero-bg-overlay{
+  position:absolute; inset:0; z-index:0;
+  background:linear-gradient(180deg, rgba(36,29,27,.55) 0%, rgba(36,29,27,.82) 55%, var(--espresso-900) 100%);
+}
+.hero > .wrap{position:relative; z-index:1}
+@media (prefers-reduced-motion:reduce){
+  .hero-bg-video{display:none}
+}
+.hero-grid{
+  display:grid; gap:48px; align-items:center;
+  grid-template-columns:1fr;
+}
+@media(min-width:960px){
+  .hero-grid{grid-template-columns:1.05fr .95fr; gap:64px}
+}
+.hero-copy h1{
+  font-family:var(--font-display); font-weight:400;
+  font-size:clamp(2rem,1.35rem + 2.6vw,3.375rem);
+  line-height:1.14; letter-spacing:-.015em; color:#fff;
+  max-width:15ch;
+  text-wrap:balance;
+  text-shadow:0 2px 20px rgba(0,0,0,.22);
+}
+.hero-copy h1 em{
+  display:block; font-style:italic; font-weight:300;
+  font-size:.94em; color:var(--rosewood-200); margin-top:10px;
+}
+.hero-copy .lead{margin-top:22px; max-width:46ch; font-size:17px; line-height:1.65; color:rgba(243,235,228,.8)}
+.hero-copy .btn-row{margin-top:var(--space-6)}
+.hero-copy .micro{font-size:13px; color:rgba(243,235,228,.58); margin-top:12px}
+
+.hero-photo{position:relative; justify-self:center; width:100%; max-width:400px}
+.hero-photo .frame{
+  border-radius:var(--radius-2xl); overflow:hidden; box-shadow:var(--shadow-lg);
+  aspect-ratio:4/5; background:var(--rosewood-900);
+  border:1px solid rgba(255,255,255,.14);
+}
+.hero-photo img{width:100%; height:100%; object-fit:cover}
+.hero-photo .badge{
+  position:absolute; left:-16px; bottom:-18px; background:#fff; color:var(--ink-800);
+  border-radius:var(--radius-lg); padding:14px 18px; box-shadow:var(--shadow-lg);
+  display:flex; align-items:center; gap:10px; max-width:230px;
+}
+.hero-photo .badge svg{flex:none; color:var(--gold-400); width:22px; height:22px}
+.hero-photo .badge b{display:block; font-family:var(--font-display); font-size:18px; color:var(--rosewood-900); line-height:1.1}
+.hero-photo .badge span{display:block; font-size:12px; color:var(--ink-600); margin-top:2px}
+
+.stat-row{
+  display:flex; flex-wrap:wrap; gap:clamp(28px,6vw,64px);
+  margin-top:clamp(48px,7vw,80px); padding:32px 0; border-top:1px solid rgba(255,255,255,.14);
+}
+.stat b{display:block; font-family:var(--font-display); font-weight:400; font-size:34px; color:#fff; line-height:1}
+.stat span{display:block; font-size:13.5px; color:rgba(243,235,228,.62); margin-top:6px}
+
+/* ---------- BOTÕES ---------- */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  min-height:52px; padding:0 30px; border:none; cursor:pointer;
+  font-family:var(--font-body); font-size:16px; font-weight:600; letter-spacing:.01em;
+  border-radius:var(--radius-full); text-decoration:none;
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease, color .18s ease;
+}
+@media(min-width:640px){ .btn{min-height:56px; padding:0 34px} }
+.btn-primary{background:var(--rosewood-700); color:#fff; box-shadow:var(--shadow-cta)}
+.btn-primary:hover{background:#7A4F56; transform:translateY(-2px); box-shadow:0 10px 26px rgba(78,48,54,.26)}
+.btn-secondary{background:transparent; color:var(--ink-800); border:1.5px solid var(--sand-200)}
+.btn-secondary:hover{border-color:var(--rosewood-500); color:var(--rosewood-900)}
+.btn-secondary.on-dark{color:#F3EBE4; border-color:rgba(255,255,255,.32)}
+.btn-secondary.on-dark:hover{border-color:var(--rosewood-300); color:#fff}
+.btn-dark{background:#fff; color:var(--espresso-900)}
+.btn-dark:hover{background:var(--rosewood-100); transform:translateY(-2px)}
+.btn-link{background:none; color:var(--rosewood-700); min-height:auto; padding:0; text-decoration:underline; text-underline-offset:4px; font-size:15px}
+.btn-link:hover{color:var(--rosewood-900)}
+.btn-row{display:flex; flex-wrap:wrap; gap:16px; align-items:center}
+.micro{font-size:13px; color:var(--ink-600); margin-top:12px}
+.wa-icon{flex:none}
+
+/* ---------- SOBRE ---------- */
+.about-grid{display:grid; gap:var(--space-8); grid-template-columns:1fr}
+@media(min-width:960px){ .about-grid{grid-template-columns:1fr 1.1fr; align-items:start; gap:64px} }
+.about-text p.body{font-size:17px; line-height:1.7; max-width:60ch; color:var(--ink-800)}
+.about-photos{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+.about-photos .ph{
+  border-radius:var(--radius-xl); overflow:hidden; box-shadow:var(--shadow-md); background:var(--sand-200);
+  aspect-ratio:4/5;
+}
+.about-photos .ph img{width:100%; height:100%; object-fit:cover}
+.about-photos .ph:nth-child(2){margin-top:32px}
+
+.highlight-grid{display:grid; gap:24px; grid-template-columns:1fr; margin-top:var(--space-8)}
+@media(min-width:700px){ .highlight-grid{grid-template-columns:repeat(2,1fr); gap:32px} }
+.card-icon{
+  background:var(--cream-50); border:1px solid var(--sand-200); border-radius:var(--radius-lg);
+  padding:28px; position:relative;
+}
+section.alt .card-icon{background:#fff}
+.card-icon::before{
+  content:""; position:absolute; top:0; left:28px; width:44px; height:3px;
+  background:var(--rosewood-700); border-radius:0 0 3px 3px;
+}
+.card-icon .ico{width:28px; height:28px; margin-bottom:16px; color:var(--rosewood-500)}
+.card-icon h3,.card-icon h4{margin:0 0 8px; font-size:20px; font-weight:600; color:var(--ink-800); font-family:var(--font-body)}
+.card-icon p{font-size:15px; line-height:1.6; color:var(--ink-600)}
+
+/* ---------- ESPECIALISTA ---------- */
+.specialist-grid{display:grid; gap:var(--space-8); grid-template-columns:1fr; align-items:start}
+@media(min-width:900px){ .specialist-grid{grid-template-columns:.85fr 1.15fr; gap:56px} }
+.specialist-photo{
+  border-radius:var(--radius-xl); overflow:hidden; box-shadow:var(--shadow-md);
+  aspect-ratio:4/5; background:var(--sand-200);
+}
+.specialist-photo img{width:100%; height:100%; object-fit:cover}
+.specialist-name{font-family:var(--font-display); font-weight:500; font-size:clamp(1.5rem,1.3rem + .8vw,1.75rem); color:var(--rosewood-900)}
+.specialist-role{margin-top:6px; font-size:15px; font-weight:600; color:var(--rosewood-700)}
+.specialist-bio{margin-top:20px; font-size:17px; line-height:1.7; max-width:58ch; color:var(--ink-800)}
+.specialist-cards{display:grid; gap:20px; grid-template-columns:1fr; margin-top:32px}
+@media(min-width:560px){ .specialist-cards{grid-template-columns:1fr 1fr} }
+
+/* ---------- DIFERENCIAIS / TRATAMENTOS ---------- */
+.grid3{display:grid; gap:24px; grid-template-columns:1fr}
+@media(min-width:640px){ .grid3{grid-template-columns:repeat(2,1fr)} }
+@media(min-width:960px){ .grid3{grid-template-columns:repeat(3,1fr); gap:32px} }
+
+.treat-card{
+  border-radius:var(--radius-lg); border:1px solid var(--sand-200); background:var(--cream-50);
+  padding:28px; position:relative; transition:box-shadow .2s ease, transform .2s ease;
+}
+section.alt .treat-card{background:#fff}
+.treat-card::before{
+  content:""; position:absolute; top:0; left:28px; width:44px; height:3px;
+  background:var(--rosewood-700); border-radius:0 0 3px 3px;
+}
+.treat-card:hover{box-shadow:var(--shadow-md); transform:translateY(-3px)}
+.treat-card .ico{width:28px; height:28px; margin-bottom:16px; color:var(--rosewood-500)}
+.treat-card h3{font-size:20px; font-weight:600; color:var(--ink-800)}
+.treat-card p{margin-top:8px; font-size:15px; line-height:1.6; color:var(--ink-600)}
+.treat-card .btn-link{display:inline-block; margin-top:16px}
+
+.section-cta{margin-top:var(--space-8); text-align:center}
+
+/* ---------- DEPOIMENTOS ---------- */
+.card-quote{
+  background:#fff; border-radius:var(--radius-lg); padding:28px; box-shadow:var(--shadow-sm);
+  border:1px solid var(--sand-200); height:100%;
+}
+.stars{color:var(--gold-400); letter-spacing:2px; font-size:15px; margin-bottom:14px}
+.card-quote q{
+  display:block; font-family:var(--font-display); font-style:italic; font-size:18px;
+  line-height:1.55; color:var(--ink-800); quotes:none;
+}
+.card-quote footer{margin-top:16px; font-size:14px; color:var(--ink-600)}
+
+/* ---------- LOCALIZAÇÃO ---------- */
+.location-grid{display:grid; gap:var(--space-8); grid-template-columns:1fr}
+@media(min-width:900px){ .location-grid{grid-template-columns:1fr 1fr; gap:56px} }
+.location-card{
+  background:#fff; border:1px solid var(--sand-200); border-radius:var(--radius-xl);
+  padding:clamp(24px,3vw,36px); box-shadow:var(--shadow-md);
+}
+.location-card h3{font-family:var(--font-display); font-size:22px; font-weight:500; color:var(--rosewood-900); margin-bottom:10px}
+.location-card .row{display:flex; gap:14px; padding:16px 0; border-top:1px solid var(--sand-200)}
+.location-card .row:first-of-type{border-top:none; padding-top:0}
+.location-card .row svg{flex:none; width:22px; height:22px; color:var(--rosewood-500); margin-top:2px}
+.location-card .row b{display:block; font-size:15px; font-weight:600; color:var(--ink-800)}
+.location-card .row span{display:block; font-size:14.5px; color:var(--ink-600); margin-top:3px; line-height:1.5}
+.location-card .btn-row{margin-top:28px}
+.map-visual{
+  border-radius:var(--radius-2xl); overflow:hidden; background:linear-gradient(135deg,var(--rosewood-300),var(--sand-200));
+  min-height:260px; display:flex; align-items:center; justify-content:center; position:relative;
+  box-shadow:var(--shadow-md);
+}
+.map-visual svg{width:64px; height:64px; color:#fff; opacity:.9}
+.map-visual .pin-label{
+  position:absolute; bottom:20px; left:20px; right:20px; background:rgba(36,29,27,.82); color:#fff;
+  border-radius:var(--radius-md); padding:14px 18px; font-size:14px; backdrop-filter:blur(4px);
+}
+
+/* ---------- CTA FINAL ---------- */
+.cta-final{background:var(--espresso-900); color:#F3EBE4; text-align:center}
+.cta-final .sec-head{margin-left:auto; margin-right:auto; text-align:center}
+.cta-final h2{color:#fff}
+.cta-final h2 em{color:var(--rosewood-300)}
+.cta-final p{color:rgba(243,235,228,.78); margin-left:auto; margin-right:auto}
+.cta-final .btn-row{justify-content:center; margin-top:var(--space-6)}
+
+/* ---------- FOOTER ---------- */
+footer.site-footer{border-top:1px solid var(--sand-200); background:var(--sand-100)}
+.footer-grid{
+  display:grid; gap:32px; padding:var(--space-8) 0 var(--space-6);
+  grid-template-columns:1fr;
+}
+@media(min-width:768px){ .footer-grid{grid-template-columns:1.2fr 1fr 1fr} }
+.footer-brand{font-family:var(--font-display); font-size:20px; color:var(--rosewood-900); font-weight:500}
+.footer-col h4{font-size:13px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--rosewood-500); margin-bottom:14px}
+.footer-col p, .footer-col a{display:block; font-size:14.5px; color:var(--ink-600); text-decoration:none; margin-bottom:10px}
+.footer-col a:hover{color:var(--rosewood-700); text-decoration:underline}
+.footer-social{display:flex; gap:12px; margin-top:4px}
+.footer-social a{
+  display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px;
+  border-radius:50%; background:#fff; border:1px solid var(--sand-200); color:var(--rosewood-700); margin-bottom:0;
+}
+.footer-social a:hover{background:var(--rosewood-100); text-decoration:none}
+.footer-bottom{border-top:1px solid var(--sand-200); padding:20px 0 40px; font-size:13.5px; color:var(--ink-600)}
+
+/* ---------- FLUTUANTE ---------- */
+.wa-float{
+  position:fixed; right:20px; bottom:20px; z-index:90;
+  width:60px; height:60px; border-radius:50%; border:none; cursor:pointer;
+  background:var(--whatsapp); color:#fff; box-shadow:var(--shadow-float);
+  display:flex; align-items:center; justify-content:center; text-decoration:none;
+  transition:transform .18s ease, background .18s ease;
+}
+.wa-float:hover{background:var(--whatsapp-dark); transform:translateY(-3px)}
+
+/* ---------- ANIMAÇÃO DE ENTRADA (única, no hero) ---------- */
+.reveal{opacity:0; transform:translateY(16px); animation:reveal-in .7s ease forwards}
+.reveal.d1{animation-delay:.05s}
+.reveal.d2{animation-delay:.18s}
+.reveal.d3{animation-delay:.3s}
+.reveal.d4{animation-delay:.42s}
+@keyframes reveal-in{to{opacity:1; transform:translateY(0)}}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important; animation:none !important}
+  html{scroll-behavior:auto}
+  .reveal{opacity:1; transform:none}
+}
+
+/* ---------- VISUALLY HIDDEN ---------- */
+.vh{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header>
+  <nav class="nav" aria-label="Navegação principal">
+    <div class="wrap nav-inner">
+      <a class="nav-brand" href="#inicio">Dra. Cristiane Fardim Murad</a>
+      <ul class="nav-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#tratamentos">Tratamentos</a></li>
+        <li><a href="#especialista">Especialista</a></li>
+        <li><a href="#diferenciais">Diferenciais</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a class="btn btn-primary" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener">
+          <svg class="wa-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
+          Agendar Consulta
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="conteudo">
+
+  <!-- ========== HERO / INÍCIO ========== -->
+  <section class="hero" id="inicio" aria-labelledby="hero-title">
+    <video class="hero-bg-video" autoplay muted loop playsinline preload="auto" poster="assets/dra-cristiane-hero.png" aria-hidden="true">
+      <source src="assets/dra-cristiane-hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero-bg-overlay" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow on-dark reveal d1">Odontologia de confiança · Lavras/MG</span>
+          <h1 id="hero-title" class="reveal d2">Seu sorriso merece cuidado de verdade.<em>A Dra. Cristiane Fardim Murad está aqui para isso.</em></h1>
+          <p class="lead reveal d3">Atendimento próximo, técnica apurada e um cuidado pensado para cada paciente — do primeiro contato ao resultado que você vê no espelho.</p>
+          <div class="btn-row reveal d4">
+            <a class="btn btn-dark" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener">
+              <svg class="wa-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
+              Agendar pelo WhatsApp
+            </a>
+            <a class="btn btn-secondary on-dark" href="#tratamentos">Conhecer os tratamentos</a>
+          </div>
+          <p class="micro reveal d4">Atendimento particular · Resposta no mesmo dia</p>
+        </div>
+
+        <div class="hero-photo reveal d3">
+          <div class="frame">
+            <img src="assets/dra-cristiane-hero.png" alt="Dra. Cristiane Fardim Murad, cirurgiã-dentista, sorrindo em retrato profissional" width="840" height="1050" loading="eager" fetchpriority="high">
+          </div>
+          <div class="badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.86L12 17.77l-6.18 3.23L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+            <div><b>5,0</b><span>Avaliação no Google</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stat-row reveal d4">
+        <div class="stat"><b>5,0 ★</b><span>Avaliação no Google</span></div>
+        <div class="stat"><b>69</b><span>Avaliações de pacientes</span></div>
+        <div class="stat"><b>CRO-MG</b><span>27161 · Registro profissional</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SOBRE ========== -->
+  <section class="block" id="sobre" aria-labelledby="sobre-title">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="eyebrow">Sobre o consultório</span>
+          <h2 id="sobre-title" style="font-family:var(--font-display); font-weight:400; font-size:clamp(1.875rem,1.4rem + 2vw,2.625rem); line-height:1.15; letter-spacing:-.015em; color:var(--rosewood-900); margin-bottom:16px">Sobre a Dra. Cristiane Fardim Murad</h2>
+          <p class="body">A Dra. Cristiane Fardim Murad atua em Lavras-MG oferecendo uma odontologia próxima, cuidadosa e tecnicamente precisa. Cada atendimento é conduzido com atenção ao histórico, às necessidades e ao ritmo de cada paciente — porque tratar bem começa por ouvir bem.</p>
+        </div>
+        <div class="about-photos">
+          <div class="ph"><img src="assets/dra-cristiane-sobre-1.png" alt="Dra. Cristiane Fardim Murad, cirurgiã-dentista CRO-MG 27161, em retrato profissional" width="480" height="600" loading="lazy"></div>
+          <div class="ph"><img src="assets/dra-cristiane-sobre-2.png" alt="Dra. Cristiane Fardim Murad em retrato profissional, sorrindo" width="480" height="600" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="highlight-grid">
+        <article class="card-icon">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 21s-7-4.35-9.5-9C.5 7.5 3 4 6.5 4 9 4 11 5.5 12 7c1-1.5 3-3 5.5-3 3.5 0 6 3.5 4 8-2.5 4.65-9.5 9-9.5 9Z"/>
+          </svg>
+          <h3>Atendimento Próximo e Humano</h3>
+          <p>Cada plano de tratamento é pensado a partir da real necessidade de quem está na cadeira — sem pressa e sem fórmulas prontas.</p>
+        </article>
+        <article class="card-icon">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>
+          </svg>
+          <h3>Técnica e Atualização Constante</h3>
+          <p>Procedimentos conduzidos com precisão técnica, usando materiais e equipamentos que garantem diagnósticos mais exatos e resultados mais previsíveis.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ESPECIALISTA ========== -->
+  <section class="block alt" id="especialista" aria-labelledby="especialista-title">
+    <div class="wrap">
+      <span class="eyebrow">Conheça a responsável técnica</span>
+      <h2 id="especialista-title" style="font-family:var(--font-display); font-weight:400; font-size:clamp(1.875rem,1.4rem + 2vw,2.625rem); line-height:1.15; letter-spacing:-.015em; color:var(--rosewood-900); margin-bottom:var(--space-8)">Especialista responsável</h2>
+
+      <div class="specialist-grid">
+        <div class="specialist-photo">
+          <img src="assets/dra-cristiane-especialista.png" alt="Retrato profissional da Dra. Cristiane Fardim Murad, cirurgiã-dentista responsável técnica, CRO-MG 27161" width="620" height="775" loading="lazy">
+        </div>
+        <div>
+          <p class="specialist-name">Dra. Cristiane Fardim Murad</p>
+          <p class="specialist-role">Harmonização Facial · CRO-MG 27161</p>
+          <p class="specialist-bio">Responsável técnica do consultório e referência em harmonização facial em Lavras, a Dra. Cristiane conduz cada tratamento com uma missão clara: <strong>cuidar do sorriso com a mesma atenção que teria com a própria família.</strong></p>
+
+          <div class="specialist-cards">
+            <article class="card-icon">
+              <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 3l8 4v5c0 4.5-3.2 7.9-8 9-4.8-1.1-8-4.5-8-9V7l8-4Z"/><path d="m9 12 2 2 4-4"/>
+              </svg>
+              <h4>Registro Profissional</h4>
+              <p>Cirurgiã-dentista inscrita no CRO-MG sob o número 27161.</p>
+            </article>
+            <article class="card-icon">
+              <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.86L12 17.77l-6.18 3.23L7 14.14 2 9.27l7.1-1.01L12 2z"/>
+              </svg>
+              <h4>Área de Destaque</h4>
+              <p>Harmonização facial — evidenciando a beleza e mantendo a juventude com naturalidade.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DIFERENCIAIS ========== -->
+  <section class="block" id="diferenciais" aria-labelledby="diferenciais-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Por que escolher</span>
+        <h2 id="diferenciais-title">Por que escolher<em>a Dra. Cristiane Fardim Murad?</em></h2>
+      </div>
+
+      <div class="grid3">
+        <article class="card-icon">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l9-6 9 6v11"/><path d="M9 21v-7h6v7"/></svg>
+          <h3>Ambiente Pensado para Você</h3>
+          <p>Consultório confortável e acolhedor, projetado para reduzir a ansiedade e tornar cada visita mais tranquila.</p>
+        </article>
+        <article class="card-icon">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          <h3>Atendimento Individualizado</h3>
+          <p>Cada plano de tratamento é construído sob medida, respeitando sua anatomia, seu histórico e seus objetivos.</p>
+        </article>
+        <article class="card-icon">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          <h3>Agilidade no Atendimento</h3>
+          <p>Agendamento simples pelo WhatsApp e horários pensados para caber na sua rotina.</p>
+        </article>
+        <article class="card-icon">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-8.9 8.4 8.5 8.5 0 0 1-3.8-1L3 20l1.1-5.3a8.4 8.4 0 0 1 15.9-3.2Z"/></svg>
+          <h3>Comunicação Clara</h3>
+          <p>Explicações transparentes sobre diagnóstico, tratamento e valores — sem surpresas.</p>
+        </article>
+        <article class="card-icon">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <h3>Precisão Diagnóstica</h3>
+          <p>Avaliação criteriosa para indicar o tratamento certo, evitando procedimentos desnecessários.</p>
+        </article>
+        <article class="card-icon">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14.5-4.6M20 12a8 8 0 0 1-14.5 4.6"/><path d="M18.5 3v4.4H14M5.5 21v-4.4H10"/></svg>
+          <h3>Acompanhamento Contínuo</h3>
+          <p>O cuidado não termina na cadeira do consultório — acompanhamento em cada etapa do tratamento.</p>
+        </article>
+      </div>
+
+      <div class="section-cta">
+        <a class="btn btn-primary" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener">
+          <svg class="wa-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
+          Agendar minha avaliação
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TRATAMENTOS ========== -->
+  <section class="block alt" id="tratamentos" aria-labelledby="tratamentos-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">O que tratamos</span>
+        <h2 id="tratamentos-title">Nossos tratamentos</h2>
+        <p>Cuidado completo para todas as fases do seu sorriso, da prevenção à estética.</p>
+      </div>
+
+      <div class="grid3">
+        <article class="treat-card">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.35-9.5-9C.5 7.5 3 4 6.5 4 9 4 11 5.5 12 7c1-1.5 3-3 5.5-3 3.5 0 6 3.5 4 8-2.5 4.65-9.5 9-9.5 9Z"/></svg>
+          <h3>Limpeza e Prevenção</h3>
+          <p>Remoção profissional de placa e tártaro para manter a saúde bucal em dia e prevenir problemas futuros.</p>
+          <a class="btn-link" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Limpeza%20e%20Preven%C3%A7%C3%A3o" target="_blank" rel="noopener">Saiba mais →</a>
+        </article>
+        <article class="treat-card">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.86L12 17.77l-6.18 3.23L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+          <h3>Clareamento Dental</h3>
+          <p>Um sorriso mais claro e uniforme, com procedimento seguro e acompanhamento profissional.</p>
+          <a class="btn-link" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Clareamento%20Dental" target="_blank" rel="noopener">Saiba mais →</a>
+        </article>
+        <article class="treat-card">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 4v16M15 4v16"/></svg>
+          <h3>Facetas e Lentes de Contato Dental</h3>
+          <p>Lâminas finas que corrigem cor, formato e pequenas imperfeições, com resultado natural.</p>
+          <a class="btn-link" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Facetas%20e%20Lentes%20de%20Contato%20Dental" target="_blank" rel="noopener">Saiba mais →</a>
+        </article>
+        <article class="treat-card">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v6m0 0-3 12h6L12 9Z"/></svg>
+          <h3>Tratamento de Canal (Endodontia)</h3>
+          <p>Técnica precisa para eliminar a dor e preservar o dente natural com segurança.</p>
+          <a class="btn-link" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Tratamento%20de%20Canal" target="_blank" rel="noopener">Saiba mais →</a>
+        </article>
+        <article class="treat-card">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10a8 8 0 0 1 16 0v10"/><path d="M4 20h16"/></svg>
+          <h3>Próteses Dentárias</h3>
+          <p>Reabilitação oral com conforto e naturalidade, recuperando a confiança para sorrir e mastigar sem preocupação.</p>
+          <a class="btn-link" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Pr%C3%B3teses%20Dent%C3%A1rias" target="_blank" rel="noopener">Saiba mais →</a>
+        </article>
+        <article class="treat-card">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v8m0 0-3 3m3-3 3 3M9 16h6l-1 6h-4l-1-6Z"/></svg>
+          <h3>Implante Dentário</h3>
+          <p>Devolução da função mastigatória e da estética com acompanhamento próximo em cada etapa.</p>
+          <a class="btn-link" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Implante%20Dent%C3%A1rio" target="_blank" rel="noopener">Saiba mais →</a>
+        </article>
+        <article class="treat-card">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/><circle cx="12" cy="8" r="4"/><path d="M4 21h16"/></svg>
+          <h3>Periodontia</h3>
+          <p>Diagnóstico e tratamento das gengivas, base essencial para um sorriso saudável e duradouro.</p>
+          <a class="btn-link" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Periodontia" target="_blank" rel="noopener">Saiba mais →</a>
+        </article>
+        <article class="treat-card">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M9 13.5 7 21l5-2 5 2-2-7.5"/></svg>
+          <h3>Odontopediatria</h3>
+          <p>Cuidado especializado e acolhedor para o sorriso dos pequenos, desde a primeira consulta.</p>
+          <a class="btn-link" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Odontopediatria" target="_blank" rel="noopener">Saiba mais →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DEPOIMENTOS ========== -->
+  <section class="block" id="depoimentos" aria-labelledby="depoimentos-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Depoimentos</span>
+        <h2 id="depoimentos-title">O que nossos<em>pacientes dizem</em></h2>
+        <p>Histórias reais de quem já passou pelo consultório.</p>
+      </div>
+
+      <div class="grid3">
+        <article class="card-quote">
+          <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+          <q>Todos os procedimentos são com produtos de qualidade.</q>
+          <footer>— Paciente · Avaliação no Google ★★★★★</footer>
+        </article>
+        <article class="card-quote">
+          <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+          <q>E o resultado superou minhas expectativas.</q>
+          <footer>— Paciente · Avaliação no Google ★★★★★</footer>
+        </article>
+        <article class="card-quote">
+          <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+          <q>Muito atenciosa, competente, uma excelente profissional, além de linda!</q>
+          <footer>— Paciente · Avaliação no Google ★★★★★</footer>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ONDE ESTAMOS ========== -->
+  <section class="block alt" id="contato" aria-labelledby="local-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Onde estamos</span>
+        <h2 id="local-title">Onde estamos</h2>
+        <p>Venha nos conhecer</p>
+      </div>
+
+      <div class="location-grid">
+        <div class="location-card">
+          <h3>Endereço</h3>
+          <div class="row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <div>
+              <b>Av. R. Cmte. Soares Júnior, 462 — Arthur Bernardes</b>
+              <span>Lavras/MG · CEP 37205-034</span>
+            </div>
+          </div>
+          <div class="row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            <div>
+              <b>Horário de atendimento</b>
+              <span>Segunda a Sexta · a partir das 08:00</span>
+              <span>Horários e disponibilidade sob consulta — confirme pelo WhatsApp.</span>
+            </div>
+          </div>
+          <div class="row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92Z"/></svg>
+            <div>
+              <b>(35) 99861-7070</b>
+              <span>Atendimento particular · Resposta no mesmo dia</span>
+            </div>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener">
+              <svg class="wa-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
+              Agendar pelo WhatsApp
+            </a>
+            <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=Av.+R.+Cmte.+Soares+J%C3%BAnior%2C+462+-+Arthur+Bernardes%2C+Lavras+-+MG%2C+37205-034" target="_blank" rel="noopener">Ver no Google Maps</a>
+          </div>
+        </div>
+
+        <a class="map-visual" href="https://www.google.com/maps/search/?api=1&query=Av.+R.+Cmte.+Soares+J%C3%BAnior%2C+462+-+Arthur+Bernardes%2C+Lavras+-+MG%2C+37205-034" target="_blank" rel="noopener" aria-label="Abrir localização do consultório no Google Maps: Av. R. Cmte. Soares Júnior, 462, Arthur Bernardes, Lavras/MG">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <span class="pin-label">Arthur Bernardes · Lavras/MG — toque para abrir no Google Maps</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA FINAL ========== -->
+  <section class="block cta-final" aria-labelledby="cta-final-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="cta-final-title">Seu sorriso é<em>a nossa prioridade</em></h2>
+        <p>Marque agora sua consulta de avaliação e descubra como um atendimento cuidadoso pode transformar a relação que você tem com o seu sorriso.</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-dark" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener">
+          <svg class="wa-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
+          Agendar pelo WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand">Dra. Cristiane Fardim Murad</p>
+        <p style="margin-top:10px; max-width:34ch; color:var(--ink-600); font-size:14.5px">Odontologia de confiança em Lavras/MG. Cirurgiã-dentista · CRO-MG 27161.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/dracristianefardim/" target="_blank" rel="noopener" aria-label="Instagram da Dra. Cristiane Fardim Murad">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+          </a>
+          <a href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener" aria-label="WhatsApp da Dra. Cristiane Fardim Murad">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#tratamentos">Tratamentos</a>
+        <a href="#especialista">Especialista</a>
+        <a href="#depoimentos">Depoimentos</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <a href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener">(35) 99861-7070</a>
+        <p>Av. R. Cmte. Soares Júnior, 462<br>Arthur Bernardes · Lavras/MG</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Dra. Cristiane Fardim Murad · CRO-MG 27161 · Todos os direitos reservados<br>
+      Lavras · Minas Gerais · Brasil
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener" aria-label="Agendar consulta pelo WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
+</a>
+
+<script>
+(function(){
+  var video = document.querySelector('.hero-bg-video');
+  if(!video) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(reduce.matches){ video.removeAttribute('autoplay'); video.pause(); }
+  reduce.addEventListener('change', function(e){
+    if(e.matches){ video.pause(); } else { video.play().catch(function(){}); }
+  });
+})();
+</script>
+</body>
+</html>

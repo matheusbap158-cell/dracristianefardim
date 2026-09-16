@@ -1,0 +1,281 @@
+# Landing Page — Dra. Cristiane Fardim Murad
+### Texto completo, por seção (estrutura espelhada no site de referência)
+
+> Onde aparecer **[entre colchetes]** é uma informação real do negócio que só a Dra. Cristiane pode confirmar (endereço, telefone, CRO, formação, diferenciais, depoimentos). Preencha antes de publicar — não invente esses dados.
+
+---
+
+## 1. Menu / Cabeçalho
+
+**Logo/Nome:** Dra. Cristiane Fardim Murad
+
+**Itens do menu:**
+- Início
+- Sobre
+- Tratamentos
+- Especialista
+- Diferenciais
+- Depoimentos
+- Contato
+
+**Botão do menu (CTA fixo):** Agendar Consulta → link para `https://wa.me/[DDD+número do WhatsApp]`
+
+---
+
+## 2. Seção Início (Hero)
+
+**Selo/eyebrow:** Odontologia de confiança · Lavras/MG
+
+**Título (H1):**
+# Seu sorriso merece cuidado de verdade. A Dra. Cristiane Fardim Murad está aqui para isso.
+
+**Subtítulo:**
+Atendimento próximo, técnica apurada e um cuidado pensado para cada paciente — do primeiro contato ao resultado que você vê no espelho.
+
+**Botões (CTA):**
+- Agendar pelo WhatsApp → `https://wa.me/[número]`
+- Conhecer os tratamentos → âncora para #tratamentos
+
+**Barra de credibilidade (ajustar números reais):**
+- ⭐ 5 estrelas no Google — [confirmar]
+- **+[X] anos** cuidando de sorrisos em Lavras
+- **+[X] pacientes** atendidos
+- [X] consultório(s) equipado(s)
+
+---
+
+## 3. Seção Sobre
+
+**Eyebrow:** Sobre o consultório
+
+**Título (H2):** Sobre a Dra. Cristiane Fardim Murad
+
+**Texto:**
+A Dra. Cristiane Fardim Murad atua em Lavras-MG oferecendo uma odontologia próxima, cuidadosa e tecnicamente precisa. Cada atendimento é conduzido com atenção ao histórico, às necessidades e ao ritmo de cada paciente — porque tratar bem começa por ouvir bem.
+
+*(3 fotos aqui: fachada/recepção, consultório equipado, e a Dra. Cristiane atendendo ou em ambiente clínico)*
+
+**3 blocos de destaque:**
+
+### Atendimento Próximo e Humano
+Cada plano de tratamento é pensado a partir da real necessidade de quem está na cadeira — sem pressa e sem fórmulas prontas.
+
+### Técnica e Atualização Constante
+Procedimentos conduzidos com precisão técnica, usando materiais e equipamentos que garantem diagnósticos mais exatos e resultados mais previsíveis.
+
+### Referência em Lavras
+[Ajustar conforme realidade: tempo de atuação, indicação de pacientes, reconhecimento na região]
+
+---
+
+## 4. Seção Especialista Responsável
+
+**Eyebrow:** Conheça a responsável técnica
+
+**Título (H2):** Especialista responsável
+
+*(Foto: retrato profissional da Dra. Cristiane)*
+
+### Dra. Cristiane Fardim Murad
+[Especialidade(s)] · CRO-MG [número]
+
+Responsável técnica do consultório e referência em [especialidade/foco de atuação] em Lavras, a Dra. Cristiane conduz cada tratamento com uma missão clara: **cuidar do sorriso com a mesma atenção que teria com a própria família**.
+
+**4 blocos (preencher com dados reais):**
+
+### Formação Acadêmica
+Cirurgiã-dentista graduada pela **[nome da faculdade]**.
+
+### Especialização
+[Pós-graduação/especialização, se houver — ex.: "Pós-graduada em [área] pelo [instituição]"]
+
+### Área de Destaque
+[Ex.: "Especialista em [tratamento] com precisão técnica e cuidado detalhado"]
+
+### Compromisso com o Paciente
+[Algum diferencial pessoal/social, se houver — trabalho voluntário, atendimento humanizado, etc. Se não houver, este bloco pode virar algo como "Atualização Constante" com cursos e congressos recentes]
+
+---
+
+## 5. Seção Equipe *(incluir apenas se houver equipe de apoio; se for atendimento individual, remover esta seção)*
+
+**Eyebrow:** Nossa equipe
+
+**Título (H2):** Equipe de apoio
+
+**Subtítulo:** Profissionais dedicados ao seu atendimento
+
+*(Cards por pessoa: foto, nome, função — ex.: recepção, auxiliar de consultório dentário, serviços gerais)*
+[Preencher com nomes e funções reais, se aplicável]
+
+---
+
+## 6. Seção Diferenciais
+
+**Eyebrow:** Por que escolher
+
+**Título (H2):** Por que escolher a Dra. Cristiane Fardim Murad?
+
+### Ambiente Pensado para Você
+Consultório confortável e acolhedor, projetado para reduzir a ansiedade e tornar cada visita mais tranquila.
+
+### Atendimento Individualizado
+Cada plano de tratamento é construído sob medida, respeitando sua anatomia, seu histórico e seus objetivos.
+
+### Agilidade no Atendimento
+Agendamento simples pelo WhatsApp e horários pensados para caber na sua rotina.
+
+### Comunicação Clara
+Explicações transparentes sobre diagnóstico, tratamento e valores — sem surpresas.
+
+### Precisão Diagnóstica
+Avaliação criteriosa para indicar o tratamento certo, evitando procedimentos desnecessários.
+
+### Acompanhamento Contínuo
+O cuidado não termina na cadeira do consultório — acompanhamento em cada etapa do tratamento.
+
+*(Ajustar/remover itens conforme os diferenciais reais do consultório)*
+
+---
+
+## 7. Seção Tratamentos
+
+**Eyebrow:** O que tratamos
+
+**Título (H2):** Nossos tratamentos
+
+**Subtítulo:** Cuidado completo para todas as fases do seu sorriso, da prevenção à estética.
+
+> Selecione abaixo apenas os tratamentos que a Dra. Cristiane realmente oferece:
+
+### Limpeza e Prevenção
+Remoção profissional de placa e tártaro para manter a saúde bucal em dia e prevenir problemas futuros.
+[Saiba mais →]
+
+### Clareamento Dental
+Um sorriso mais claro e uniforme, com procedimento seguro e acompanhamento profissional.
+[Saiba mais →]
+
+### Facetas e Lentes de Contato Dental
+Lâminas finas que corrigem cor, formato e pequenas imperfeições, com resultado natural.
+[Saiba mais →]
+
+### Tratamento de Canal (Endodontia)
+Técnica precisa para eliminar a dor e preservar o dente natural com segurança.
+[Saiba mais →]
+
+### Próteses Dentárias
+Reabilitação oral com conforto e naturalidade, recuperando a confiança para sorrir e mastigar sem preocupação.
+[Saiba mais →]
+
+### Implante Dentário
+Devolução da função mastigatória e da estética com acompanhamento próximo em cada etapa.
+[Saiba mais →]
+
+### Periodontia
+Diagnóstico e tratamento das gengivas, base essencial para um sorriso saudável e duradouro.
+[Saiba mais →]
+
+### Odontopediatria
+Cuidado especializado e acolhedor para o sorriso dos pequenos, desde a primeira consulta.
+[Saiba mais →]
+
+*(Todos os "Saiba mais →" apontam para o WhatsApp: `https://wa.me/[número]`)*
+
+---
+
+## 8. Seção Resultados *(se houver fotos de antes/depois autorizadas pelos pacientes)*
+
+**Eyebrow:** Resultados
+
+**Título (H2):** Sorrisos transformados
+
+**Subtítulo:** Resultados reais de quem confiou no nosso cuidado.
+
+*(Galeria de fotos antes/depois — legenda padrão abaixo de cada uma:)*
+[Nome do tratamento] — resultado real de paciente
+
+> ⚠️ Usar apenas fotos com autorização expressa do paciente. Se ainda não houver banco de imagens, esta seção pode ficar para uma segunda etapa do site.
+
+---
+
+## 9. Seção Depoimentos
+
+**Eyebrow:** Depoimentos
+
+**Título (H2):** O que nossos pacientes dizem
+
+**Subtítulo:** Histórias reais de quem já passou pelo consultório.
+
+**Card de depoimento (modelo — repetir 3x com depoimentos reais):**
+★★★★★
+"[Inserir depoimento real de paciente aqui]"
+— Paciente · Avaliação no Google ★★★★★
+
+> ⚠️ Não preencher com depoimentos fictícios. Se ainda não houver avaliações suficientes, dá pra pedir para 2–3 pacientes de confiança deixarem uma avaliação no Google antes do lançamento, ou começar o site sem esta seção.
+
+---
+
+## 10. Seção Onde Estamos
+
+**Eyebrow:** Onde estamos
+
+**Título (H2):** Onde estamos
+
+**Subtítulo:** Venha nos conhecer
+
+*(Mapa incorporado do Google Maps)*
+
+### Endereço
+[Rua, número — Bairro]
+Lavras/MG · CEP [xxxxx-xxx]
+
+### Horário de atendimento
+Segunda a Sexta
+[xxh às xxh]
+
+Sábado
+[xxh às xxh, ou "Fechado"]
+
+Domingo
+Fechado
+
+**Botões:**
+- Agendar pelo WhatsApp → `https://wa.me/[número]`
+- Ver no Google Maps → [link do Maps]
+
+---
+
+## 11. Seção CTA Final
+
+**Título (H2):** Seu sorriso é a nossa prioridade
+
+**Texto:**
+Marque agora sua consulta de avaliação e descubra como um atendimento cuidadoso pode transformar a relação que você tem com o seu sorriso.
+
+**Botão:** Agendar pelo WhatsApp → `https://wa.me/[número]`
+
+---
+
+## 12. Rodapé
+
+**Telefone/WhatsApp:** [(xx) xxxxx-xxxx]
+
+**Nome:** Dra. Cristiane Fardim Murad
+
+**Linha de créditos:** © 2026 Dra. Cristiane Fardim Murad · CRO-MG [número] · Todos os direitos reservados
+
+**Localização:** Lavras · Minas Gerais · Brasil
+
+---
+
+## Resumo do que falta preencher com dados reais da cliente
+- Telefone/WhatsApp
+- CRO-MG (número)
+- Formação acadêmica e especializações
+- Anos de atuação / nº de pacientes atendidos
+- Se atua sozinha ou tem equipe de apoio (e quem são)
+- Lista final de tratamentos oferecidos
+- Endereço completo e horário de atendimento
+- Depoimentos reais de pacientes (não inventar)
+- Fotos de antes/depois autorizadas (se houver)

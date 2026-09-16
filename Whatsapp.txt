@@ -1,0 +1,1 @@
+https://api.whatsapp.com/send/?phone=5535998617070&text=Ol%C3%A1%2Cgostaria+de+fazer+uma+avalia%C3%A7%C3%A3o+&type=phone_number&app_absent=0&utm_source=ig

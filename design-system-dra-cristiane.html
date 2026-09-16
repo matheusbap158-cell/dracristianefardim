@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design System — Dra. Cristiane Fardim Murad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rosewood-900:#4E3036; --rosewood-700:#8B5C64; --rosewood-500:#A97A81;
+  --rosewood-300:#C9A3A7; --rosewood-100:#F0E1E2;
+  --cream-50:#FDFBF6; --sand-100:#F6EDE4; --sand-200:#E7DACD;
+  --ink-600:#6B5F5A; --ink-800:#3B322F; --espresso-900:#241D1B;
+  --whatsapp:#25D366; --whatsapp-dark:#128C7E; --gold-400:#B9955F;
+  --jade-700:#2E6B52; --alert-600:#A5463C;
+
+  --font-display:'Fraunces',Georgia,'Times New Roman',serif;
+  --font-body:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+
+  --radius-sm:8px; --radius-md:12px; --radius-lg:16px;
+  --radius-xl:20px; --radius-2xl:28px; --radius-full:999px;
+
+  --shadow-sm:0 1px 2px rgba(78,48,54,.06);
+  --shadow-md:0 4px 16px rgba(78,48,54,.08);
+  --shadow-lg:0 12px 34px rgba(78,48,54,.12);
+  --shadow-cta:0 6px 18px rgba(78,48,54,.18);
+
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px;
+  --space-6:32px; --space-7:48px; --space-8:64px; --space-9:96px; --space-10:128px;
+  --container:1160px;
+
+  --page-bg:var(--cream-50);
+  --page-fg:var(--ink-800);
+  --surface:#FFFFFF;
+  --line:var(--sand-200);
+}
+/* A tela do sistema mantém o canvas da marca em qualquer tema do visualizador:
+   as cores aqui SÃO a especificação, então não devem mudar com o tema do leitor. */
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --page-bg:var(--cream-50); --page-fg:var(--ink-800); }
+}
+:root[data-theme="dark"]{ --page-bg:var(--cream-50); --page-fg:var(--ink-800); }
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:86px}
+body{
+  margin:0; background:var(--page-bg); color:var(--page-fg);
+  font-family:var(--font-body); font-size:17px; line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%}
+h1,h2,h3{margin:0}
+p{margin:0}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.85em}
+
+.wrap{max-width:var(--container); margin:0 auto; padding:0 24px}
+@media(min-width:768px){ .wrap{padding:0 40px} }
+
+/* ---------- NAV ---------- */
+.nav{
+  position:sticky; top:0; z-index:60;
+  background:rgba(253,251,246,.88); backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{display:flex; align-items:center; gap:24px; height:66px; overflow-x:auto; scrollbar-width:none}
+.nav-inner::-webkit-scrollbar{display:none}
+.nav-brand{
+  font-family:var(--font-display); font-size:17px; font-weight:500;
+  color:var(--rosewood-900); white-space:nowrap; letter-spacing:-.01em;
+}
+.nav a{
+  color:var(--ink-600); text-decoration:none; font-size:14.5px; font-weight:500;
+  white-space:nowrap; padding:6px 0; border-bottom:2px solid transparent;
+}
+.nav a:hover{color:var(--rosewood-700); border-bottom-color:var(--rosewood-500)}
+
+/* ---------- HERO ---------- */
+.hero{padding:clamp(56px,8vw,104px) 0 clamp(48px,6vw,80px)}
+.eyebrow{
+  display:inline-block; border-left:2px solid var(--rosewood-500);
+  padding-left:10px; font-size:12px; font-weight:600; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--rosewood-500); line-height:1;
+  margin-bottom:22px;
+}
+.hero h1{
+  font-family:var(--font-display); font-weight:400;
+  font-size:clamp(2.375rem,1.6rem + 3.4vw,4rem);
+  line-height:1.08; letter-spacing:-.02em; color:var(--rosewood-900);
+  max-width:18ch;
+}
+.hero h1 em{display:block; font-style:italic; color:var(--rosewood-500)}
+.hero .lead{margin-top:24px; max-width:60ch; font-size:19px; color:var(--ink-600)}
+.hero-meta{
+  display:flex; flex-wrap:wrap; gap:10px; margin-top:32px;
+}
+.pill{
+  display:inline-flex; align-items:center; gap:8px;
+  background:var(--rosewood-100); color:var(--rosewood-900);
+  border-radius:var(--radius-full); padding:8px 16px; font-size:13.5px; font-weight:500;
+}
+
+/* ---------- SEÇÕES ---------- */
+section.block{padding:clamp(56px,7vw,96px) 0; border-top:1px solid var(--line)}
+section.block.alt{background:var(--sand-100)}
+.sec-head{max-width:62ch; margin-bottom:var(--space-7)}
+.sec-head h2{
+  font-family:var(--font-display); font-weight:400;
+  font-size:clamp(1.875rem,1.4rem + 2vw,2.625rem);
+  line-height:1.15; letter-spacing:-.015em; color:var(--rosewood-900);
+}
+.sec-head p{margin-top:14px; color:var(--ink-600)}
+h3.sub{
+  font-family:var(--font-display); font-size:1.5rem; font-weight:500;
+  color:var(--rosewood-900); margin:var(--space-7) 0 var(--space-4);
+}
+h3.sub:first-of-type{margin-top:0}
+.note{
+  border-left:3px solid var(--rosewood-300); padding:2px 0 2px 18px;
+  color:var(--ink-600); font-size:15.5px; max-width:66ch; margin-top:var(--space-5);
+}
+.note strong{color:var(--ink-800)}
+
+/* ---------- SWATCHES ---------- */
+.swatches{
+  display:grid; gap:14px; list-style:none; padding:0; margin:0;
+  grid-template-columns:repeat(auto-fill,minmax(232px,1fr));
+}
+.swatch{
+  width:100%; text-align:left; cursor:pointer; font-family:inherit;
+  background:var(--surface); border:1px solid var(--line);
+  border-radius:var(--radius-lg); padding:0; overflow:hidden;
+  box-shadow:var(--shadow-sm); transition:box-shadow .18s ease, transform .18s ease;
+}
+.swatch:hover{box-shadow:var(--shadow-lg); transform:translateY(-2px)}
+.swatch:focus-visible{outline:3px solid var(--rosewood-500); outline-offset:3px}
+.swatch .chip{display:block; height:84px; background:var(--c)}
+.swatch .meta{display:block; padding:14px 16px 16px}
+.swatch .name{display:block; font-weight:600; font-size:15px; color:var(--ink-800)}
+.swatch .hex{display:block; font-family:ui-monospace,Menlo,monospace; font-size:13px; color:var(--rosewood-700); margin-top:3px}
+.swatch .use{display:block; font-size:13px; color:var(--ink-600); margin-top:6px; line-height:1.5}
+
+.ratio{
+  display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); margin-top:var(--space-6);
+}
+.ratio div{padding:18px; border-radius:var(--radius-md); font-size:14px; font-weight:500}
+
+/* ---------- TIPOGRAFIA ---------- */
+.type-row{
+  display:grid; gap:8px 32px; padding:22px 0; border-bottom:1px solid var(--line);
+  grid-template-columns:1fr;
+}
+@media(min-width:860px){ .type-row{grid-template-columns:150px 1fr; align-items:baseline} }
+.type-spec{font-size:13px; color:var(--ink-600); line-height:1.6}
+.type-spec b{display:block; color:var(--ink-800); font-size:14px; font-weight:600}
+.d1{font-family:var(--font-display); font-weight:400; font-size:clamp(2.2rem,1.6rem+2.6vw,3.6rem); line-height:1.08; letter-spacing:-.02em; color:var(--rosewood-900)}
+.d2{font-family:var(--font-display); font-weight:400; font-size:clamp(1.8rem,1.4rem+1.6vw,2.6rem); line-height:1.15; letter-spacing:-.015em; color:var(--rosewood-900)}
+.d3{font-family:var(--font-display); font-weight:500; font-size:1.75rem; line-height:1.25; color:var(--rosewood-900)}
+.d4{font-size:20px; font-weight:600; color:var(--ink-800)}
+.tlead{font-size:19px; color:var(--ink-600); line-height:1.65}
+.tbody{font-size:17px; line-height:1.7; max-width:62ch}
+.tsmall{font-size:14px; color:var(--ink-600)}
+.italic-demo{font-family:var(--font-display); font-style:italic; color:var(--rosewood-500)}
+
+/* ---------- BOTÕES ---------- */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  height:56px; padding:0 34px; border:none; cursor:pointer;
+  font-family:var(--font-body); font-size:16px; font-weight:600; letter-spacing:.01em;
+  border-radius:var(--radius-full); text-decoration:none;
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
+}
+.btn:focus-visible{outline:3px solid var(--rosewood-300); outline-offset:3px}
+.btn-primary{background:var(--rosewood-700); color:#fff; box-shadow:var(--shadow-cta)}
+.btn-primary:hover{background:#7A4F56; transform:translateY(-2px); box-shadow:0 10px 26px rgba(78,48,54,.26)}
+.btn-secondary{background:transparent; color:var(--ink-800); border:1.5px solid var(--sand-200)}
+.btn-secondary:hover{border-color:var(--rosewood-500); color:var(--rosewood-900)}
+.btn-link{background:none; color:var(--rosewood-700); height:auto; padding:0; text-decoration:underline; text-underline-offset:4px}
+.btn[disabled]{opacity:.45; cursor:not-allowed; transform:none; box-shadow:none}
+.btn-dark{background:#fff; color:var(--espresso-900)}
+.btn-dark:hover{background:var(--rosewood-100); transform:translateY(-2px)}
+.btn-row{display:flex; flex-wrap:wrap; gap:16px; align-items:center}
+.micro{font-size:13px; color:var(--ink-600); margin-top:12px}
+
+/* ---------- INPUTS ---------- */
+.form-demo{
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-xl);
+  padding:clamp(24px,3vw,32px); max-width:560px; box-shadow:var(--shadow-md);
+}
+.field{margin-bottom:20px}
+.field label{display:block; font-size:14px; font-weight:500; color:var(--ink-600); margin-bottom:8px}
+.field input,.field select,.field textarea{
+  width:100%; height:52px; padding:0 18px; background:#fff;
+  border:1.5px solid var(--sand-200); border-radius:var(--radius-md);
+  font-family:var(--font-body); font-size:16px; color:var(--ink-800);
+  transition:border-color .16s ease, box-shadow .16s ease;
+}
+.field textarea{height:auto; min-height:130px; padding:14px 18px; line-height:1.6; resize:vertical}
+.field input::placeholder,.field textarea::placeholder{color:#A99D97}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none; border-color:var(--rosewood-700); box-shadow:0 0 0 4px rgba(139,92,100,.14);
+}
+.field.error input{border-color:var(--alert-600); box-shadow:0 0 0 4px rgba(165,70,60,.12)}
+.msg-error{display:block; font-size:13px; color:var(--alert-600); margin-top:7px}
+
+/* ---------- CARDS ---------- */
+.grid3{display:grid; gap:24px; grid-template-columns:repeat(auto-fit,minmax(272px,1fr))}
+@media(min-width:900px){ .grid3{gap:32px} }
+
+.card-img{
+  border-radius:var(--radius-xl); overflow:hidden; box-shadow:var(--shadow-md); background:var(--surface);
+}
+.card-img .ph{
+  height:168px; background:linear-gradient(135deg,var(--rosewood-300),var(--sand-200));
+  display:flex; align-items:center; justify-content:center; color:#fff; font-size:13px; letter-spacing:.06em;
+}
+.card-img .body{background:var(--rosewood-500); color:#fff; padding:24px}
+.card-img h4{margin:0 0 8px; font-size:20px; font-weight:600}
+.card-img p{font-size:14.5px; line-height:1.6; color:rgba(255,255,255,.92)}
+
+.card-icon{
+  background:var(--cream-50); border:1px solid var(--sand-200); border-radius:var(--radius-lg);
+  padding:28px; position:relative;
+}
+.card-icon::before{
+  content:""; position:absolute; top:0; left:28px; width:44px; height:3px;
+  background:var(--rosewood-700); border-radius:0 0 3px 3px;
+}
+.card-icon .ico{
+  width:30px; height:30px; margin-bottom:16px; color:var(--rosewood-500);
+}
+.card-icon h4{margin:0 0 8px; font-size:20px; font-weight:600; color:var(--ink-800)}
+.card-icon p{font-size:15px; line-height:1.6; color:var(--ink-600)}
+
+.card-quote{
+  background:#fff; border-radius:var(--radius-lg); padding:28px; box-shadow:var(--shadow-sm);
+  border:1px solid var(--line);
+}
+.stars{color:var(--gold-400); letter-spacing:2px; font-size:15px; margin-bottom:14px}
+.card-quote q{
+  display:block; font-family:var(--font-display); font-style:italic; font-size:18px;
+  line-height:1.55; color:var(--ink-800); quotes:none;
+}
+.card-quote footer{margin-top:16px; font-size:14px; color:var(--ink-600)}
+
+/* ---------- BLOCO ESCURO ---------- */
+.dark-demo{
+  background:var(--espresso-900); color:#F3EBE4; border-radius:var(--radius-2xl);
+  padding:clamp(32px,5vw,64px); margin-top:var(--space-6);
+}
+.dark-demo h3{
+  font-family:var(--font-display); font-weight:400; font-size:clamp(1.8rem,1.4rem+1.4vw,2.4rem);
+  line-height:1.15; color:#fff; max-width:20ch;
+}
+.dark-demo h3 em{display:block; font-style:italic; color:var(--rosewood-300)}
+.dark-demo p{margin-top:16px; color:rgba(243,235,228,.76); max-width:52ch; font-size:17px}
+.dark-demo .btn-row{margin-top:32px}
+.stat-row{display:flex; flex-wrap:wrap; gap:clamp(24px,5vw,56px); margin-top:40px; padding-top:32px; border-top:1px solid rgba(255,255,255,.14)}
+.stat b{display:block; font-family:var(--font-display); font-weight:400; font-size:34px; color:#fff; line-height:1}
+.stat span{display:block; font-size:13.5px; color:rgba(243,235,228,.6); margin-top:6px}
+
+/* ---------- ESCALAS ---------- */
+.radius-grid{display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(128px,1fr))}
+.radius-box{
+  background:var(--rosewood-100); border:1.5px solid var(--rosewood-300);
+  height:104px; display:flex; align-items:flex-end; justify-content:center; padding-bottom:12px;
+  font-size:12.5px; color:var(--rosewood-900); font-weight:500;
+}
+.shadow-grid{display:grid; gap:24px; grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.shadow-box{
+  background:#fff; border-radius:var(--radius-lg); height:112px;
+  display:flex; align-items:center; justify-content:center; text-align:center;
+  font-size:13px; color:var(--ink-600); padding:12px;
+}
+.space-list{display:flex; flex-direction:column; gap:10px}
+.space-item{display:flex; align-items:center; gap:16px; font-size:13.5px; color:var(--ink-600)}
+.space-item i{display:block; height:16px; background:var(--rosewood-500); border-radius:3px; flex:none}
+.space-item b{color:var(--ink-800); font-weight:600; min-width:92px; font-size:14px}
+
+/* ---------- LISTA DE REGRAS ---------- */
+.rules{list-style:none; padding:0; margin:0; display:grid; gap:14px}
+.rules li{
+  display:flex; gap:14px; align-items:flex-start;
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-md);
+  padding:18px 20px; font-size:15.5px; line-height:1.6;
+}
+.rules li::before{
+  content:""; flex:none; width:10px; height:10px; margin-top:8px; border-radius:50%;
+  background:var(--rosewood-500);
+}
+.rules li b{color:var(--rosewood-900)}
+
+/* ---------- RESUMO ---------- */
+.summary{background:var(--espresso-900); color:#F3EBE4}
+.summary h2{color:#fff}
+.summary .sec-head p{color:rgba(243,235,228,.7)}
+.summary ol{margin:0; padding-left:22px; max-width:66ch; display:grid; gap:18px}
+.summary li{font-size:18px; line-height:1.65; color:rgba(243,235,228,.9)}
+.summary li::marker{color:var(--rosewood-300); font-family:var(--font-display)}
+.summary li b{color:#fff; font-weight:600}
+
+/* ---------- FLUTUANTE + TOAST ---------- */
+.wa-float{
+  position:fixed; right:20px; bottom:20px; z-index:70;
+  width:60px; height:60px; border-radius:50%; border:none; cursor:pointer;
+  background:var(--whatsapp); color:#fff; box-shadow:0 8px 24px rgba(37,211,102,.35);
+  display:flex; align-items:center; justify-content:center;
+  transition:transform .18s ease, background .18s ease;
+}
+.wa-float:hover{background:var(--whatsapp-dark); transform:translateY(-3px)}
+.wa-float:focus-visible{outline:3px solid var(--rosewood-500); outline-offset:3px}
+.toast{
+  position:fixed; left:50%; bottom:30px; transform:translate(-50%,16px);
+  background:var(--espresso-900); color:#fff; padding:12px 22px; border-radius:var(--radius-full);
+  font-size:14px; font-weight:500; opacity:0; pointer-events:none;
+  transition:opacity .2s ease, transform .2s ease; z-index:90; box-shadow:var(--shadow-lg);
+}
+.toast.show{opacity:1; transform:translate(-50%,0)}
+
+footer.end{padding:48px 0 120px; border-top:1px solid var(--line); font-size:14px; color:var(--ink-600)}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important; animation:none !important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <span class="nav-brand">DS · Dra. Cristiane Fardim Murad</span>
+    <a href="#cores">Cores</a>
+    <a href="#tipografia">Tipografia</a>
+    <a href="#componentes">Componentes</a>
+    <a href="#estetica">Estética</a>
+    <a href="#conversao">Conversão</a>
+    <a href="#resumo">Resumo</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Design System · v1</span>
+    <h1>A base visual da landing page,<em>em um lugar só.</em></h1>
+    <p class="lead">Extraído das referências de identidade: rosé amadeirado sobre creme quente, serifada de contraste alto e blocos escuros usados com parcimônia para sustentar autoridade. Clique em qualquer cor para copiar o código.</p>
+    <div class="hero-meta">
+      <span class="pill">Odontologia · Lavras/MG</span>
+      <span class="pill">Objetivo: agendamento por WhatsApp</span>
+      <span class="pill">Fraunces + Figtree</span>
+    </div>
+  </div>
+</header>
+
+<!-- ========== CORES ========== -->
+<section class="block" id="cores">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Cores</h2>
+      <p>Três camadas com funções diferentes. A regra que mantém a página convertendo: a maior mancha de cor saturada da tela é sempre um botão — se o rosewood aparecer mais em decoração do que em CTA, ele deixou de ser cor de ação.</p>
+    </div>
+
+    <h3 class="sub">Paleta principal — Rosewood</h3>
+    <div class="swatches">
+      <button class="swatch" data-hex="#4E3036" style="--c:#4E3036"><span class="chip"></span><span class="meta"><span class="name">Rosewood 900</span><span class="hex">#4E3036</span><span class="use">Títulos de máximo peso, rodapé</span></span></button>
+      <button class="swatch" data-hex="#8B5C64" style="--c:#8B5C64"><span class="chip"></span><span class="meta"><span class="name">Rosewood 700</span><span class="hex">#8B5C64</span><span class="use">Cor de ação: botão primário, links, ícones ativos</span></span></button>
+      <button class="swatch" data-hex="#A97A81" style="--c:#A97A81"><span class="chip"></span><span class="meta"><span class="name">Rosewood 500</span><span class="hex">#A97A81</span><span class="use">Overlay sobre foto, linha em itálico dos títulos</span></span></button>
+      <button class="swatch" data-hex="#C9A3A7" style="--c:#C9A3A7"><span class="chip"></span><span class="meta"><span class="name">Rosewood 300</span><span class="hex">#C9A3A7</span><span class="use">Eyebrows, ícones decorativos, divisores</span></span></button>
+      <button class="swatch" data-hex="#F0E1E2" style="--c:#F0E1E2"><span class="chip"></span><span class="meta"><span class="name">Rosewood 100</span><span class="hex">#F0E1E2</span><span class="use">Badges, estados selecionados</span></span></button>
+    </div>
+
+    <h3 class="sub">Paleta secundária — Neutros quentes</h3>
+    <div class="swatches">
+      <button class="swatch" data-hex="#FDFBF6" style="--c:#FDFBF6"><span class="chip"></span><span class="meta"><span class="name">Cream 50</span><span class="hex">#FDFBF6</span><span class="use">Fundo padrão da página</span></span></button>
+      <button class="swatch" data-hex="#F6EDE4" style="--c:#F6EDE4"><span class="chip"></span><span class="meta"><span class="name">Sand 100</span><span class="hex">#F6EDE4</span><span class="use">Fundo de seção alternada</span></span></button>
+      <button class="swatch" data-hex="#E7DACD" style="--c:#E7DACD"><span class="chip"></span><span class="meta"><span class="name">Sand 200</span><span class="hex">#E7DACD</span><span class="use">Bordas de card, contorno de input</span></span></button>
+      <button class="swatch" data-hex="#6B5F5A" style="--c:#6B5F5A"><span class="chip"></span><span class="meta"><span class="name">Ink 600</span><span class="hex">#6B5F5A</span><span class="use">Texto secundário, legendas</span></span></button>
+      <button class="swatch" data-hex="#3B322F" style="--c:#3B322F"><span class="chip"></span><span class="meta"><span class="name">Ink 800</span><span class="hex">#3B322F</span><span class="use">Corpo de texto principal</span></span></button>
+      <button class="swatch" data-hex="#241D1B" style="--c:#241D1B"><span class="chip"></span><span class="meta"><span class="name">Espresso 900</span><span class="hex">#241D1B</span><span class="use">Blocos escuros: hero e CTA final</span></span></button>
+    </div>
+
+    <h3 class="sub">Paleta de suporte</h3>
+    <div class="swatches">
+      <button class="swatch" data-hex="#25D366" style="--c:#25D366"><span class="chip"></span><span class="meta"><span class="name">WhatsApp</span><span class="hex">#25D366</span><span class="use">Só no botão flutuante e no ícone dentro dos CTAs</span></span></button>
+      <button class="swatch" data-hex="#128C7E" style="--c:#128C7E"><span class="chip"></span><span class="meta"><span class="name">WhatsApp Dark</span><span class="hex">#128C7E</span><span class="use">Hover do botão flutuante</span></span></button>
+      <button class="swatch" data-hex="#B9955F" style="--c:#B9955F"><span class="chip"></span><span class="meta"><span class="name">Gold 400</span><span class="hex">#B9955F</span><span class="use">Estrelas, selo de avaliação no Google</span></span></button>
+      <button class="swatch" data-hex="#2E6B52" style="--c:#2E6B52"><span class="chip"></span><span class="meta"><span class="name">Jade 700</span><span class="hex">#2E6B52</span><span class="use">Confirmações, selo de CRO, "resposta rápida"</span></span></button>
+      <button class="swatch" data-hex="#A5463C" style="--c:#A5463C"><span class="chip"></span><span class="meta"><span class="name">Alert 600</span><span class="hex">#A5463C</span><span class="use">Erro de formulário</span></span></button>
+    </div>
+
+    <h3 class="sub">Contraste verificado</h3>
+    <div class="ratio">
+      <div style="background:#fff;color:#8B5C64;border:1px solid var(--line)">Rosewood 700 sobre branco — 5,5:1 ✓ AA</div>
+      <div style="background:#8B5C64;color:#fff">Branco sobre Rosewood 700 — 5,5:1 ✓ AA</div>
+      <div style="background:#FDFBF6;color:#4E3036;border:1px solid var(--line)">Rosewood 900 sobre creme — 9,9:1 ✓ AAA</div>
+      <div style="background:#241D1B;color:#F3EBE4">Creme sobre Espresso 900 — 13:1 ✓ AAA</div>
+    </div>
+
+    <p class="note"><strong>Nunca use preto puro nem cinza frio.</strong> O sistema inteiro é quente; um <code>#666</code> no meio disso é o detalhe que faz a página parecer template de banco de modelos.</p>
+  </div>
+</section>
+
+<!-- ========== TIPOGRAFIA ========== -->
+<section class="block alt" id="tipografia">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Tipografia</h2>
+      <p><b>Fraunces</b> para títulos — serifada de contraste alto, com itálico expressivo; é o que passa "consultório particular" em vez de "convênio". <b>Figtree</b> para corpo e interface — sans geométrica com acentuação de português bem desenhada. Alternativas equivalentes: Newsreader, Prata ou Playfair no lugar da Fraunces; Jost, Be Vietnam Pro ou Poppins no lugar da Figtree.</p>
+    </div>
+
+    <div class="type-row">
+      <div class="type-spec"><b>H1</b>Fraunces 400 · 64→38px<br>entrelinha 1.08 · -0.02em</div>
+      <div><span class="d1">Cuidado, técnica e o<br><span class="italic-demo">sorriso que você merece.</span></span></div>
+    </div>
+    <div class="type-row">
+      <div class="type-spec"><b>H2</b>Fraunces 400 · 42→30px<br>entrelinha 1.15 · -0.015em</div>
+      <div><span class="d2">Tratamentos para cada fase<br><span class="italic-demo">do seu sorriso.</span></span></div>
+    </div>
+    <div class="type-row">
+      <div class="type-spec"><b>H3</b>Fraunces 500 · 28→24px<br>entrelinha 1.25</div>
+      <div><span class="d3">Especialista responsável</span></div>
+    </div>
+    <div class="type-row">
+      <div class="type-spec"><b>H4 / título de card</b>Figtree 600 · 20→18px</div>
+      <div><span class="d4">Clareamento dental</span></div>
+    </div>
+    <div class="type-row">
+      <div class="type-spec"><b>Lead</b>Figtree 400 · 19→17px<br>entrelinha 1.65</div>
+      <div><p class="tlead">Atendimento próximo, técnica apurada e um cuidado pensado para cada paciente — do primeiro contato ao resultado.</p></div>
+    </div>
+    <div class="type-row">
+      <div class="type-spec"><b>Corpo</b>Figtree 400 · 17→16px<br>entrelinha 1.7 · máx. 62ch</div>
+      <div><p class="tbody">Cada plano de tratamento é pensado a partir da real necessidade de quem está na cadeira. A linha de leitura não passa de 68 caracteres: texto que atravessa a tela inteira cansa e derruba o leitor antes do botão.</p></div>
+    </div>
+    <div class="type-row">
+      <div class="type-spec"><b>Pequeno / legenda</b>Figtree 400 · 14px</div>
+      <div><p class="tsmall">Atendimento particular · Resposta no mesmo dia</p></div>
+    </div>
+    <div class="type-row">
+      <div class="type-spec"><b>Eyebrow</b>Figtree 600 · 12px<br>caixa alta · 0.14em</div>
+      <div><span class="eyebrow" style="margin:0">Nossos tratamentos</span></div>
+    </div>
+
+    <p class="note"><strong>A assinatura tipográfica da marca:</strong> cada título termina com uma <span class="italic-demo">linha inteira em itálico</span> no Rosewood 500 — linha inteira, nunca uma palavra solta destacada no meio da frase. E caixa alta existe em um único lugar do sistema: o eyebrow.</p>
+  </div>
+</section>
+
+<!-- ========== COMPONENTES ========== -->
+<section class="block" id="componentes">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Componentes</h2>
+      <p>Botão é pílula, input não é. Card muda de forma conforme a função. Essas três decisões sustentam a hierarquia inteira da página.</p>
+    </div>
+
+    <h3 class="sub">Botões</h3>
+    <div class="btn-row">
+      <button class="btn btn-primary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
+        Agendar minha avaliação
+      </button>
+      <button class="btn btn-secondary">Conhecer os tratamentos</button>
+      <button class="btn btn-link">Ver no Google Maps</button>
+      <button class="btn btn-primary" disabled>Enviando…</button>
+    </div>
+    <p class="micro">Microcopy abaixo do primário: <b>Atendimento particular · Resposta no mesmo dia.</b> Ele existe para responder a objeção silenciosa de "será que vão me responder?".</p>
+
+    <p class="note"><strong>Um único botão primário por dobra da tela.</strong> Dois primários competindo dividem o clique. Se a seção precisa de duas ações, a segunda é sempre secundária. Altura mínima de 48px em qualquer elemento clicável no mobile.</p>
+
+    <h3 class="sub">Inputs de formulário</h3>
+    <div class="form-demo">
+      <div class="field">
+        <label for="n">Seu nome</label>
+        <input id="n" type="text" placeholder="Como prefere ser chamada(o)">
+      </div>
+      <div class="field">
+        <label for="w">WhatsApp</label>
+        <input id="w" type="tel" placeholder="(35) 99999-0000">
+      </div>
+      <div class="field">
+        <label for="t">O que você procura</label>
+        <select id="t">
+          <option>Avaliação inicial</option>
+          <option>Clareamento</option>
+          <option>Prótese ou implante</option>
+          <option>Limpeza e prevenção</option>
+        </select>
+      </div>
+      <div class="field error">
+        <label for="e">E-mail (estado de erro)</label>
+        <input id="e" type="email" value="cristiane@">
+        <span class="msg-error">Informe um e-mail completo, como nome@dominio.com.br</span>
+      </div>
+      <div class="field">
+        <label for="m">Mensagem</label>
+        <textarea id="m" placeholder="Conte rapidamente o que está sentindo ou o que gostaria de melhorar"></textarea>
+      </div>
+      <button class="btn btn-primary" style="width:100%">Enviar e falar no WhatsApp</button>
+    </div>
+    <p class="note"><strong>Label sempre acima do campo</strong> — nunca placeholder fazendo as vezes de rótulo, porque ele some assim que a pessoa digita. Fonte de 16px nos campos evita o zoom automático do iOS. E a mensagem de erro diz o que fazer, não o que falhou.</p>
+
+    <h3 class="sub">Cards</h3>
+    <div class="grid3">
+      <article class="card-img">
+        <div class="ph">imagem do tratamento</div>
+        <div class="body">
+          <h4>Clareamento dental</h4>
+          <p>Um sorriso mais claro e uniforme, com procedimento seguro e acompanhamento profissional.</p>
+        </div>
+      </article>
+      <article class="card-icon">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5.5c-1.2-1.3-3-2-4.6-1.4C5.3 4.8 4 6.8 4 9.3c0 4 2 6.3 2.8 8.6.5 1.4 1 2.6 2 2.6 1.2 0 1.4-1.6 1.7-3.3.2-1.2.6-2.2 1.5-2.2s1.3 1 1.5 2.2c.3 1.7.5 3.3 1.7 3.3 1 0 1.5-1.2 2-2.6.8-2.3 2.8-4.6 2.8-8.6 0-2.5-1.3-4.5-3.4-5.2-1.6-.6-3.4.1-4.6 1.4Z"/></svg>
+        <h4>Limpeza e prevenção</h4>
+        <p>Remoção profissional de placa e tártaro para manter a saúde bucal em dia e prevenir problemas futuros.</p>
+      </article>
+      <article class="card-quote">
+        <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+        <q>Sempre tive medo de dentista. Aqui fui ouvida antes de qualquer coisa e entendi cada etapa do tratamento.</q>
+        <footer>Paciente · Avaliação no Google</footer>
+      </article>
+    </div>
+    <p class="note">Cada card tem uma função: <strong>com imagem</strong> vende o tratamento de destaque, <strong>com ícone</strong> lista a grade completa de procedimentos (repare na barra de 3px no topo), <strong>depoimento</strong> carrega a prova social. Usar a mesma caixa para as três coisas achata a hierarquia.</p>
+
+    <h3 class="sub">Bloco escuro — hero e CTA final</h3>
+    <div class="dark-demo">
+      <h3>Seu sorriso é a<em>nossa prioridade.</em></h3>
+      <p>Marque sua consulta de avaliação e descubra como um atendimento cuidadoso muda a relação que você tem com o próprio sorriso.</p>
+      <div class="btn-row">
+        <button class="btn btn-dark">Agendar pelo WhatsApp</button>
+        <button class="btn btn-secondary" style="border-color:rgba(255,255,255,.3);color:#F3EBE4">Ver localização</button>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><b>5.0</b><span>Avaliação no Google</span></div>
+        <div class="stat"><b>+00</b><span>Anos em Lavras</span></div>
+        <div class="stat"><b>+000</b><span>Pacientes atendidos</span></div>
+        <div class="stat"><b>CRO-MG</b><span>Registro profissional</span></div>
+      </div>
+    </div>
+    <p class="note"><strong>O escuro aparece duas vezes na página inteira:</strong> hero e CTA final. Se ele se repete em quatro seções, vira ruído e deixa de significar autoridade.</p>
+  </div>
+</section>
+
+<!-- ========== ESTÉTICA ========== -->
+<section class="block alt" id="estetica">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Estética</h2>
+      <p>Arredondamento, sombra e espaçamento. É aqui que a página deixa de parecer "montada rápido" e passa a parecer projetada.</p>
+    </div>
+
+    <h3 class="sub">Arredondamento</h3>
+    <div class="radius-grid">
+      <div class="radius-box" style="border-radius:8px">sm · 8px<br>badges</div>
+      <div class="radius-box" style="border-radius:12px">md · 12px<br>inputs</div>
+      <div class="radius-box" style="border-radius:16px">lg · 16px<br>cards</div>
+      <div class="radius-box" style="border-radius:20px">xl · 20px<br>card c/ imagem</div>
+      <div class="radius-box" style="border-radius:28px">2xl · 28px<br>blocos</div>
+      <div class="radius-box" style="border-radius:999px">full<br>botões</div>
+    </div>
+    <p class="note"><strong>O raio cresce junto com o elemento.</strong> Card de 400px com raio 8px parece rígido; input com raio 28px parece brinquedo.</p>
+
+    <h3 class="sub">Sombras</h3>
+    <div class="shadow-grid">
+      <div class="shadow-box" style="box-shadow:var(--shadow-sm)">shadow-sm<br>cards em repouso</div>
+      <div class="shadow-box" style="box-shadow:var(--shadow-md)">shadow-md<br>card com imagem</div>
+      <div class="shadow-box" style="box-shadow:var(--shadow-lg)">shadow-lg<br>hover e elevação</div>
+      <div class="shadow-box" style="box-shadow:var(--shadow-cta)">shadow-cta<br>botão primário</div>
+    </div>
+    <p class="note"><strong>Toda sombra é tingida de rosewood</strong> — <code>rgba(78,48,54,…)</code>, nunca preta, que sobre creme fica cinza-sujo. E a sombra mais forte da página pertence ao CTA: é assim que o olho encontra o botão sem precisar de seta apontando.</p>
+
+    <h3 class="sub">Espaçamento — escala base 4px</h3>
+    <div class="space-list">
+      <div class="space-item"><b>space-1 · 4</b><i style="width:4px"></i></div>
+      <div class="space-item"><b>space-2 · 8</b><i style="width:8px"></i></div>
+      <div class="space-item"><b>space-3 · 12</b><i style="width:12px"></i></div>
+      <div class="space-item"><b>space-4 · 16</b><i style="width:16px"></i> título → parágrafo</div>
+      <div class="space-item"><b>space-5 · 24</b><i style="width:24px"></i> padding de card no mobile</div>
+      <div class="space-item"><b>space-6 · 32</b><i style="width:32px"></i> parágrafo → botão · gap da grade</div>
+      <div class="space-item"><b>space-7 · 48</b><i style="width:48px"></i> bloco → bloco</div>
+      <div class="space-item"><b>space-8 · 64</b><i style="width:64px"></i> seção no mobile</div>
+      <div class="space-item"><b>space-9 · 96</b><i style="width:96px"></i> seção no desktop</div>
+      <div class="space-item"><b>space-10 · 128</b><i style="width:128px"></i> respiro máximo</div>
+    </div>
+    <ul class="rules" style="margin-top:32px">
+      <li><span><b>Container:</b> máximo 1200px · padding lateral 24px no mobile, 40px no tablet, 80px no desktop.</span></li>
+      <li><span><b>Seções:</b> <code>padding: clamp(64px, 9vw, 128px) 0</code>, alternando fundo creme e areia.</span></li>
+      <li><span><b>Grade de cards:</b> gap de 24px no mobile e 32px no desktop; card com padding interno de 24 a 32px.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ========== CONVERSÃO ========== -->
+<section class="block" id="conversao">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Autoridade e conversão</h2>
+      <p>Como esses elementos são usados para a página fazer as duas coisas que ela precisa fazer: parecer um consultório em que dá para confiar, e levar a pessoa até a conversa no WhatsApp.</p>
+    </div>
+
+    <h3 class="sub">O que constrói autoridade aqui</h3>
+    <ul class="rules">
+      <li><span><b>Foto profissional real e grande no hero.</b> Consultório individual vende pela pessoa; banco de imagem em saúde destrói confiança.</span></li>
+      <li><span><b>CRO-MG visível</b> no bloco da especialista e no rodapé — é exigência do Código de Ética Odontológica e funciona como prova social.</span></li>
+      <li><span><b>Serifada + respiro generoso</b> comunicam atendimento particular. Página apertada parece consultório de volume.</span></li>
+      <li><span><b>Números em Fraunces</b> (anos, pacientes, avaliação) logo abaixo do hero — o contraste serif/sans faz parecerem dado, não anúncio.</span></li>
+      <li><span><b>Sem superlativo.</b> Nada de "melhor dentista da cidade": promessa de resultado e autopromoção comparativa são vedadas em odontologia. A autoridade vem de credencial, formação e depoimento real.</span></li>
+    </ul>
+
+    <h3 class="sub">O caminho até o WhatsApp</h3>
+    <ul class="rules">
+      <li><span><b>Cinco pontos de conversão</b> na página: hero, fim dos tratamentos, fim dos diferenciais, localização e CTA final. Mais que isso vira insistência.</span></li>
+      <li><span><b>Botão flutuante sempre visível no mobile</b> — é de onde virá quase todo o tráfego. É o único lugar em que o verde <code>#25D366</code> aparece, porque ali o reconhecimento instantâneo vale mais que a harmonia da paleta.</span></li>
+      <li><span><b>Texto do botão em ação concreta:</b> "Agendar minha avaliação" converte mais que "Saiba mais" ou "Entre em contato".</span></li>
+      <li><span><b>Link com mensagem pronta:</b> <code>wa.me/55DDDNUMERO?text=Olá, vim pelo site e quero agendar uma avaliação</code> — tira da pessoa o trabalho de pensar no que escrever, que é onde muito lead desiste.</span></li>
+      <li><span><b>Piso de qualidade:</b> foco de teclado visível em tudo, <code>prefers-reduced-motion</code> respeitado, contraste mínimo de 4.5:1 e uma única animação orquestrada, na entrada do hero.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ========== RESUMO ========== -->
+<section class="block summary" id="resumo">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Tom visual em 3 linhas</h2>
+      <p>Para conferir rapidamente se o sistema está alinhado com a marca antes de partir para o desenvolvimento.</p>
+    </div>
+    <ol>
+      <li><b>Rosé amadeirado sobre creme quente</b>, com blocos espresso pontuais — feminino e sofisticado sem cair no clichê de clínica de estética.</li>
+      <li><b>Serifada de contraste alto com uma linha em itálico</b> dentro de cada título, apoiada numa sans geométrica limpa: passa atendimento particular, cuidadoso e caro-no-bom-sentido.</li>
+      <li><b>Formas arredondadas, sombras quentes e muito respiro</b>, com a única mancha forte de cor da tela sendo sempre o botão que leva ao WhatsApp.</li>
+    </ol>
+  </div>
+</section>
+
+<footer class="end">
+  <div class="wrap">
+    Design System v1 · Dra. Cristiane Fardim Murad · Lavras/MG — base para desenvolvimento da landing page. Clique em qualquer cor desta página para copiar o hex.
+  </div>
+</footer>
+
+<button class="wa-float" id="wa" aria-label="Exemplo do botão flutuante do WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
+</button>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  var toast = document.getElementById('toast'), timer;
+  function say(msg){
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(timer);
+    timer = setTimeout(function(){ toast.classList.remove('show'); }, 1800);
+  }
+  document.querySelectorAll('.swatch').forEach(function(el){
+    el.addEventListener('click', function(){
+      var hex = el.getAttribute('data-hex');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(hex).then(function(){ say(hex + ' copiado'); })
+          .catch(function(){ say('Copie manualmente: ' + hex); });
+      } else {
+        say('Copie manualmente: ' + hex);
+      }
+    });
+  });
+  document.getElementById('wa').addEventListener('click', function(){
+    say('Demonstração — no site real este botão abre o WhatsApp');
+  });
+  document.querySelectorAll('.form-demo .btn-primary, .btn-row .btn').forEach(function(b){
+    if (b.disabled) return;
+    b.addEventListener('click', function(){ say('Demonstração do componente'); });
+  });
+})();
+</script>
+</body>
+</html>
