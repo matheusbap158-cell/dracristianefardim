@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dra. Cristiane Fardim Murad · Odontologia em Lavras/MG</title>
-<meta name="description" content="Odontologia de confiança em Lavras/MG. Atendimento próximo, técnica apurada e cuidado individual com a Dra. Cristiane Fardim Murad, CRO-MG 27161. Agende pelo WhatsApp.">
+<meta name="description" content="Odontologia com cuidado, precisão e naturalidade em Lavras/MG. Atendimento personalizado com a Dra. Cristiane Fardim Murad, CRO-MG 27161. Agende pelo WhatsApp.">
 <meta name="theme-color" content="#241D1B">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctext y='19' font-size='20'%3E%F0%9F%A6%B7%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -143,7 +143,7 @@ section.block.alt{background:var(--sand-100)}
   font-family:var(--font-display); font-weight:400;
   font-size:clamp(2rem,1.35rem + 2.6vw,3.375rem);
   line-height:1.14; letter-spacing:-.015em; color:#fff;
-  max-width:15ch;
+  max-width:20ch;
   text-wrap:balance;
   text-shadow:0 2px 20px rgba(0,0,0,.22);
 }
@@ -242,6 +242,27 @@ section.alt .card-icon{background:#fff}
 .specialist-cards{display:grid; gap:20px; grid-template-columns:1fr; margin-top:32px}
 @media(min-width:560px){ .specialist-cards{grid-template-columns:1fr 1fr} }
 
+/* ---------- HARMONIZAÇÃO FACIAL (destaque) ---------- */
+.harmon{background:var(--rosewood-100)}
+.harmon-grid{display:grid; gap:40px; grid-template-columns:1fr; align-items:center}
+@media(min-width:900px){ .harmon-grid{grid-template-columns:.85fr 1.15fr; gap:64px} }
+.harmon-photo{
+  border-radius:var(--radius-xl); overflow:hidden; box-shadow:var(--shadow-md);
+  aspect-ratio:4/5; background:var(--rosewood-300); max-width:360px;
+}
+.harmon-photo img{width:100%; height:100%; object-fit:cover}
+.harmon-copy h2{
+  font-family:var(--font-display); font-weight:400;
+  font-size:clamp(1.875rem,1.4rem + 2vw,2.625rem);
+  line-height:1.15; letter-spacing:-.015em; color:var(--rosewood-900);
+}
+.harmon-tagline{
+  margin-top:10px; font-family:var(--font-display); font-style:italic; font-weight:400;
+  font-size:1.2rem; color:var(--rosewood-700);
+}
+.harmon-copy p.body{margin-top:18px; font-size:17px; line-height:1.7; max-width:52ch; color:var(--ink-800)}
+.harmon-copy .btn-row{margin-top:28px}
+
 /* ---------- DIFERENCIAIS / TRATAMENTOS ---------- */
 .grid3{display:grid; gap:24px; grid-template-columns:1fr}
 @media(min-width:640px){ .grid3{grid-template-columns:repeat(2,1fr)} }
@@ -264,6 +285,12 @@ section.alt .treat-card{background:#fff}
 
 .section-cta{margin-top:var(--space-8); text-align:center}
 
+.treat-category + .treat-category{margin-top:var(--space-8)}
+.cat-label{
+  font-family:var(--font-display); font-style:italic; font-weight:500;
+  font-size:1.3rem; color:var(--rosewood-700); margin:0 0 20px;
+}
+
 /* ---------- DEPOIMENTOS ---------- */
 .card-quote{
   background:#fff; border-radius:var(--radius-lg); padding:28px; box-shadow:var(--shadow-sm);
@@ -274,7 +301,9 @@ section.alt .treat-card{background:#fff}
   display:block; font-family:var(--font-display); font-style:italic; font-size:18px;
   line-height:1.55; color:var(--ink-800); quotes:none;
 }
-.card-quote footer{margin-top:16px; font-size:14px; color:var(--ink-600)}
+.card-quote footer{margin-top:16px; padding-top:14px; border-top:1px solid var(--sand-200)}
+.card-quote footer strong{display:block; font-size:14.5px; font-weight:600; color:var(--ink-800)}
+.card-quote footer span{display:block; font-size:13px; color:var(--ink-600); margin-top:2px}
 
 /* ---------- LOCALIZAÇÃO ---------- */
 .location-grid{display:grid; gap:var(--space-8); grid-template-columns:1fr}
@@ -369,6 +398,7 @@ footer.site-footer{border-top:1px solid var(--sand-200); background:var(--sand-1
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#tratamentos">Tratamentos</a></li>
         <li><a href="#especialista">Especialista</a></li>
+        <li><a href="#harmonizacao">Harmonização</a></li>
         <li><a href="#diferenciais">Diferenciais</a></li>
         <li><a href="#depoimentos">Depoimentos</a></li>
         <li><a href="#contato">Contato</a></li>
@@ -376,7 +406,7 @@ footer.site-footer{border-top:1px solid var(--sand-200); background:var(--sand-1
       <div class="nav-cta">
         <a class="btn btn-primary" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener">
           <svg class="wa-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
-          Agendar Consulta
+          Agendar atendimento
         </a>
       </div>
     </div>
@@ -395,14 +425,14 @@ footer.site-footer{border-top:1px solid var(--sand-200); background:var(--sand-1
       <div class="hero-grid">
         <div class="hero-copy">
           <span class="eyebrow on-dark reveal d1">Odontologia de confiança · Lavras/MG</span>
-          <h1 id="hero-title" class="reveal d2">Seu sorriso merece cuidado de verdade.<em>A Dra. Cristiane Fardim Murad está aqui para isso.</em></h1>
-          <p class="lead reveal d3">Atendimento próximo, técnica apurada e um cuidado pensado para cada paciente — do primeiro contato ao resultado que você vê no espelho.</p>
+          <h1 id="hero-title" class="reveal d2">Odontologia com cuidado, precisão <em>e naturalidade em Lavras.</em></h1>
+          <p class="lead reveal d3">Atendimento odontológico personalizado com a Dra. Cristiane Fardim Murad, com foco em saúde, estética e resultados naturais.</p>
           <div class="btn-row reveal d4">
             <a class="btn btn-dark" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener">
               <svg class="wa-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
-              Agendar pelo WhatsApp
+              Agendar atendimento
             </a>
-            <a class="btn btn-secondary on-dark" href="#tratamentos">Conhecer os tratamentos</a>
+            <a class="btn btn-secondary on-dark" href="#tratamentos">Conhecer tratamentos</a>
           </div>
           <p class="micro reveal d4">Atendimento particular · Resposta no mesmo dia</p>
         </div>
@@ -454,7 +484,7 @@ footer.site-footer{border-top:1px solid var(--sand-200); background:var(--sand-1
             <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>
           </svg>
           <h3>Técnica e Atualização Constante</h3>
-          <p>Procedimentos conduzidos com precisão técnica, usando materiais e equipamentos que garantem diagnósticos mais exatos e resultados mais previsíveis.</p>
+          <p>Procedimentos conduzidos com precisão técnica, com tecnologia e recursos que contribuem para um atendimento mais preciso e cuidadoso.</p>
         </article>
       </div>
     </div>
@@ -488,8 +518,31 @@ footer.site-footer{border-top:1px solid var(--sand-200); background:var(--sand-1
                 <path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.86L12 17.77l-6.18 3.23L7 14.14 2 9.27l7.1-1.01L12 2z"/>
               </svg>
               <h4>Área de Destaque</h4>
-              <p>Harmonização facial — evidenciando a beleza e mantendo a juventude com naturalidade.</p>
+              <p>Harmonização facial, com foco em naturalidade e respeito aos traços de cada paciente.</p>
             </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HARMONIZAÇÃO FACIAL ========== -->
+  <section class="block harmon" id="harmonizacao" aria-labelledby="harmon-title">
+    <div class="wrap">
+      <div class="harmon-grid">
+        <div class="harmon-photo">
+          <img src="assets/dra-cristiane-sobre-2.png" alt="Dra. Cristiane Fardim Murad, cirurgiã-dentista, em retrato profissional" width="480" height="600" loading="lazy">
+        </div>
+        <div class="harmon-copy">
+          <span class="eyebrow">Especialidade em destaque</span>
+          <h2 id="harmon-title">Harmonização Facial</h2>
+          <p class="harmon-tagline">Realce sua beleza preservando sua naturalidade.</p>
+          <p class="body">Um dos focos de atuação da Dra. Cristiane Fardim Murad, a harmonização facial busca valorizar os traços de cada paciente com equilíbrio e naturalidade — sem perder a identidade do rosto.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Harmoniza%C3%A7%C3%A3o%20Facial" target="_blank" rel="noopener">
+              <svg class="wa-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
+              Agendar atendimento
+            </a>
           </div>
         </div>
       </div>
@@ -501,7 +554,7 @@ footer.site-footer{border-top:1px solid var(--sand-200); background:var(--sand-1
     <div class="wrap">
       <div class="sec-head">
         <span class="eyebrow">Por que escolher</span>
-        <h2 id="diferenciais-title">Por que escolher<em>a Dra. Cristiane Fardim Murad?</em></h2>
+        <h2 id="diferenciais-title">Por que escolher <em>a Dra. Cristiane Fardim Murad?</em></h2>
       </div>
 
       <div class="grid3">
@@ -540,7 +593,7 @@ footer.site-footer{border-top:1px solid var(--sand-200); background:var(--sand-1
       <div class="section-cta">
         <a class="btn btn-primary" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener">
           <svg class="wa-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
-          Agendar minha avaliação
+          Agendar atendimento
         </a>
       </div>
     </div>
@@ -555,55 +608,70 @@ footer.site-footer{border-top:1px solid var(--sand-200); background:var(--sand-1
         <p>Cuidado completo para todas as fases do seu sorriso, da prevenção à estética.</p>
       </div>
 
-      <div class="grid3">
-        <article class="treat-card">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.35-9.5-9C.5 7.5 3 4 6.5 4 9 4 11 5.5 12 7c1-1.5 3-3 5.5-3 3.5 0 6 3.5 4 8-2.5 4.65-9.5 9-9.5 9Z"/></svg>
-          <h3>Limpeza e Prevenção</h3>
-          <p>Remoção profissional de placa e tártaro para manter a saúde bucal em dia e prevenir problemas futuros.</p>
-          <a class="btn-link" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Limpeza%20e%20Preven%C3%A7%C3%A3o" target="_blank" rel="noopener">Saiba mais →</a>
-        </article>
-        <article class="treat-card">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.86L12 17.77l-6.18 3.23L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
-          <h3>Clareamento Dental</h3>
-          <p>Um sorriso mais claro e uniforme, com procedimento seguro e acompanhamento profissional.</p>
-          <a class="btn-link" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Clareamento%20Dental" target="_blank" rel="noopener">Saiba mais →</a>
-        </article>
-        <article class="treat-card">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 4v16M15 4v16"/></svg>
-          <h3>Facetas e Lentes de Contato Dental</h3>
-          <p>Lâminas finas que corrigem cor, formato e pequenas imperfeições, com resultado natural.</p>
-          <a class="btn-link" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Facetas%20e%20Lentes%20de%20Contato%20Dental" target="_blank" rel="noopener">Saiba mais →</a>
-        </article>
-        <article class="treat-card">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v6m0 0-3 12h6L12 9Z"/></svg>
-          <h3>Tratamento de Canal (Endodontia)</h3>
-          <p>Técnica precisa para eliminar a dor e preservar o dente natural com segurança.</p>
-          <a class="btn-link" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Tratamento%20de%20Canal" target="_blank" rel="noopener">Saiba mais →</a>
-        </article>
-        <article class="treat-card">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10a8 8 0 0 1 16 0v10"/><path d="M4 20h16"/></svg>
-          <h3>Próteses Dentárias</h3>
-          <p>Reabilitação oral com conforto e naturalidade, recuperando a confiança para sorrir e mastigar sem preocupação.</p>
-          <a class="btn-link" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Pr%C3%B3teses%20Dent%C3%A1rias" target="_blank" rel="noopener">Saiba mais →</a>
-        </article>
-        <article class="treat-card">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v8m0 0-3 3m3-3 3 3M9 16h6l-1 6h-4l-1-6Z"/></svg>
-          <h3>Implante Dentário</h3>
-          <p>Devolução da função mastigatória e da estética com acompanhamento próximo em cada etapa.</p>
-          <a class="btn-link" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Implante%20Dent%C3%A1rio" target="_blank" rel="noopener">Saiba mais →</a>
-        </article>
-        <article class="treat-card">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/><circle cx="12" cy="8" r="4"/><path d="M4 21h16"/></svg>
-          <h3>Periodontia</h3>
-          <p>Diagnóstico e tratamento das gengivas, base essencial para um sorriso saudável e duradouro.</p>
-          <a class="btn-link" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Periodontia" target="_blank" rel="noopener">Saiba mais →</a>
-        </article>
-        <article class="treat-card">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M9 13.5 7 21l5-2 5 2-2-7.5"/></svg>
-          <h3>Odontopediatria</h3>
-          <p>Cuidado especializado e acolhedor para o sorriso dos pequenos, desde a primeira consulta.</p>
-          <a class="btn-link" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Odontopediatria" target="_blank" rel="noopener">Saiba mais →</a>
-        </article>
+      <div class="treat-category">
+        <h3 class="cat-label">Prevenção e Saúde Bucal</h3>
+        <div class="grid3">
+          <article class="treat-card">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.35-9.5-9C.5 7.5 3 4 6.5 4 9 4 11 5.5 12 7c1-1.5 3-3 5.5-3 3.5 0 6 3.5 4 8-2.5 4.65-9.5 9-9.5 9Z"/></svg>
+            <h3>Limpeza e Prevenção</h3>
+            <p>Remoção profissional de placa e tártaro para manter a saúde bucal em dia e prevenir problemas futuros.</p>
+            <a class="btn-link" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Limpeza%20e%20Preven%C3%A7%C3%A3o" target="_blank" rel="noopener">Saiba mais →</a>
+          </article>
+          <article class="treat-card">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/><circle cx="12" cy="8" r="4"/><path d="M4 21h16"/></svg>
+            <h3>Periodontia</h3>
+            <p>Diagnóstico e tratamento das gengivas, base essencial para um sorriso saudável e duradouro.</p>
+            <a class="btn-link" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Periodontia" target="_blank" rel="noopener">Saiba mais →</a>
+          </article>
+          <article class="treat-card">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M9 13.5 7 21l5-2 5 2-2-7.5"/></svg>
+            <h3>Odontopediatria</h3>
+            <p>Cuidado especializado e acolhedor para o sorriso dos pequenos, desde a primeira consulta.</p>
+            <a class="btn-link" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Odontopediatria" target="_blank" rel="noopener">Saiba mais →</a>
+          </article>
+        </div>
+      </div>
+
+      <div class="treat-category">
+        <h3 class="cat-label">Reabilitação</h3>
+        <div class="grid3">
+          <article class="treat-card">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v6m0 0-3 12h6L12 9Z"/></svg>
+            <h3>Tratamento de Canal (Endodontia)</h3>
+            <p>Técnica precisa para eliminar a dor e preservar o dente natural com segurança.</p>
+            <a class="btn-link" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Tratamento%20de%20Canal" target="_blank" rel="noopener">Saiba mais →</a>
+          </article>
+          <article class="treat-card">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10a8 8 0 0 1 16 0v10"/><path d="M4 20h16"/></svg>
+            <h3>Próteses Dentárias</h3>
+            <p>Reabilitação oral com conforto e naturalidade, recuperando a confiança para sorrir e mastigar sem preocupação.</p>
+            <a class="btn-link" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Pr%C3%B3teses%20Dent%C3%A1rias" target="_blank" rel="noopener">Saiba mais →</a>
+          </article>
+          <article class="treat-card">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v8m0 0-3 3m3-3 3 3M9 16h6l-1 6h-4l-1-6Z"/></svg>
+            <h3>Implante Dentário</h3>
+            <p>Devolução da função mastigatória e da estética com acompanhamento próximo em cada etapa.</p>
+            <a class="btn-link" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Implante%20Dent%C3%A1rio" target="_blank" rel="noopener">Saiba mais →</a>
+          </article>
+        </div>
+      </div>
+
+      <div class="treat-category">
+        <h3 class="cat-label">Estética</h3>
+        <div class="grid3">
+          <article class="treat-card">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.86L12 17.77l-6.18 3.23L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+            <h3>Clareamento Dental</h3>
+            <p>Um sorriso mais claro e uniforme, com procedimento seguro e acompanhamento profissional.</p>
+            <a class="btn-link" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Clareamento%20Dental" target="_blank" rel="noopener">Saiba mais →</a>
+          </article>
+          <article class="treat-card">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 4v16M15 4v16"/></svg>
+            <h3>Facetas e Lentes de Contato Dental</h3>
+            <p>Lâminas finas que corrigem cor, formato e pequenas imperfeições, com resultado natural.</p>
+            <a class="btn-link" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20Facetas%20e%20Lentes%20de%20Contato%20Dental" target="_blank" rel="noopener">Saiba mais →</a>
+          </article>
+        </div>
       </div>
     </div>
   </section>
@@ -613,7 +681,7 @@ footer.site-footer{border-top:1px solid var(--sand-200); background:var(--sand-1
     <div class="wrap">
       <div class="sec-head">
         <span class="eyebrow">Depoimentos</span>
-        <h2 id="depoimentos-title">O que nossos<em>pacientes dizem</em></h2>
+        <h2 id="depoimentos-title">O que nossos <em>pacientes dizem</em></h2>
         <p>Histórias reais de quem já passou pelo consultório.</p>
       </div>
 
@@ -621,17 +689,17 @@ footer.site-footer{border-top:1px solid var(--sand-200); background:var(--sand-1
         <article class="card-quote">
           <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
           <q>Todos os procedimentos são com produtos de qualidade.</q>
-          <footer>— Paciente · Avaliação no Google ★★★★★</footer>
+          <footer><strong>Paciente</strong><span>Avaliação no Google</span></footer>
         </article>
         <article class="card-quote">
           <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
           <q>E o resultado superou minhas expectativas.</q>
-          <footer>— Paciente · Avaliação no Google ★★★★★</footer>
+          <footer><strong>Paciente</strong><span>Avaliação no Google</span></footer>
         </article>
         <article class="card-quote">
           <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
           <q>Muito atenciosa, competente, uma excelente profissional, além de linda!</q>
-          <footer>— Paciente · Avaliação no Google ★★★★★</footer>
+          <footer><strong>Paciente</strong><span>Avaliação no Google</span></footer>
         </article>
       </div>
     </div>
@@ -674,7 +742,7 @@ footer.site-footer{border-top:1px solid var(--sand-200); background:var(--sand-1
           <div class="btn-row">
             <a class="btn btn-primary" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener">
               <svg class="wa-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
-              Agendar pelo WhatsApp
+              Agendar atendimento
             </a>
             <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=Av.+R.+Cmte.+Soares+J%C3%BAnior%2C+462+-+Arthur+Bernardes%2C+Lavras+-+MG%2C+37205-034" target="_blank" rel="noopener">Ver no Google Maps</a>
           </div>
@@ -692,13 +760,13 @@ footer.site-footer{border-top:1px solid var(--sand-200); background:var(--sand-1
   <section class="block cta-final" aria-labelledby="cta-final-title">
     <div class="wrap">
       <div class="sec-head">
-        <h2 id="cta-final-title">Seu sorriso é<em>a nossa prioridade</em></h2>
+        <h2 id="cta-final-title">Seu sorriso é <em>a nossa prioridade</em></h2>
         <p>Marque agora sua consulta de avaliação e descubra como um atendimento cuidadoso pode transformar a relação que você tem com o seu sorriso.</p>
       </div>
       <div class="btn-row">
         <a class="btn btn-dark" href="https://wa.me/5535998617070?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o" target="_blank" rel="noopener">
           <svg class="wa-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
-          Agendar pelo WhatsApp
+          Agendar atendimento
         </a>
       </div>
     </div>
@@ -727,6 +795,7 @@ footer.site-footer{border-top:1px solid var(--sand-200); background:var(--sand-1
         <a href="#sobre">Sobre</a>
         <a href="#tratamentos">Tratamentos</a>
         <a href="#especialista">Especialista</a>
+        <a href="#harmonizacao">Harmonização Facial</a>
         <a href="#depoimentos">Depoimentos</a>
       </div>
       <div class="footer-col">
